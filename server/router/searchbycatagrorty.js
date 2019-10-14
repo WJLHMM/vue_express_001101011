@@ -2,8 +2,44 @@ var express = require('express');
 var router = express.Router();
 
 
-/* GET news page. */
-router.get('/api/searchbycatagrorty', (req, res, next)=> {
+/* GET Commoditynav page. */
+router.get('/api/searchbycatagrorty', async (req, res, next)=> {
+  const { 
+    CatalogyListFind,
+    CatalogyListModel,
+    ProductCataFind,
+    ProductCataModel
+  } = require('../db/mongodb/searchbyCatagrortySchema.js')
+
+  // let  CatalogyListdata = await CatalogyListFind()
+
+  // let  ProductCatadata = await CatalogyListFind()
+
+  CatalogyListModel.aggregate([
+      
+    {
+        $match:{"cid":"WQR2006"}
+     
+    },
+    {
+      $lookup: {
+          from: 'productcatas',
+          localField: "cid",
+          foreignField: "0cid",
+          as: "WQR2006"
+      }
+    }
+    ],  (err, docs) =>{
+      if (err) {
+          console.log(err);
+          return;
+       }
+       console.log(JSON.stringify(docs))
+    })
+
+  // console.log(ProductCatadata[21])
+
+ 
 
    res.json(
     {

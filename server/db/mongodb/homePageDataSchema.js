@@ -37,6 +37,14 @@ const IndswpierAdd = (dataObj={})=> {
     })
 }
 
+const IndswpierFind = (keyObj={}) => {
+    return new Promise((resolve, reject) => {
+        IndswpierModel.find(keyObj,(err,doc)=> {
+            if(err) return reject(err)
+            resolve(doc)
+        })
+    });
+}
 
 const IndbrandshowSchema = {
     "company": {
@@ -86,6 +94,14 @@ const IndbrandshowAdd = (dataObj={})=> {
     })
 }
 
+const IndbrandshowFind = (keyObj={}) => {
+    return new Promise((resolve, reject) => {
+        IndbrandshowModel.find(keyObj,(err,doc)=> {
+            if(err) return reject(err)
+            resolve(doc)
+        })
+    });
+}
 
 const BoxlistSchema = {
     "title": {
@@ -122,6 +138,15 @@ const BoxlistAdd = (dataObj={})=> {
     })
 }
 
+const BoxlistFind = (keyObj={}) => {
+    return new Promise((resolve, reject) => {
+        BoxlistModel.find(keyObj,(err,doc)=> {
+            if(err) return reject(err)
+            resolve(doc)
+        })
+    });
+}
+
 const IndscrollnewstextSchema = {
     "company": {
         type:String,
@@ -156,6 +181,15 @@ const IndscrollnewstextAdd = (dataObj={})=> {
             resolve(docs)
         })
     })
+}
+
+const IndscrollnewstextFind = (keyObj={}) => {
+    return new Promise((resolve, reject) => {
+        IndscrollnewstextModel.find(keyObj,(err,doc)=> {
+            if(err) return reject(err)
+            resolve(doc)
+        })
+    });
 }
 
 const SksectionSchema = {
@@ -198,6 +232,15 @@ const SksectionAdd = (dataObj={})=> {
     })
 }
 
+const SksectionFind =  (keyObj={}) => {
+    return new Promise((resolve, reject) => {
+        SksectionModel.find(keyObj,(err,doc)=> {
+            if(err) return reject(err)
+            resolve(doc)
+        })
+    });
+}
+
 
 
 const NewyearprolistSchema = {
@@ -235,6 +278,16 @@ const NewyearprolistAdd = (dataObj={})=> {
         })
     })
 }
+
+const NewyearprolistFind =  (keyObj={}) => {
+    return new Promise((resolve, reject) => {
+        NewyearprolistModel.find(keyObj,(err,doc)=> {
+            if(err) return reject(err)
+            resolve(doc)
+        })
+    });
+}
+
 
 const Newyearprolist2Schema = {
     "productname": {
@@ -275,12 +328,30 @@ const Newyearprolist2Add = (dataObj={})=> {
         })
     })
 }
+
+const Newyearprolist2Find =  (keyObj={}) => {
+    return new Promise((resolve, reject) => {
+        Newyearprolist2Model.find(keyObj,(err,doc)=> {
+            if(err) return reject(err)
+            resolve(doc)
+        })
+    });
+}
+
+
 module.exports = {
     IndswpierAdd,
+    IndswpierFind,
     IndbrandshowAdd,
+    IndbrandshowFind,
     BoxlistAdd,
+    BoxlistFind,
     IndscrollnewstextAdd,
+    IndscrollnewstextFind,
     SksectionAdd,
+    SksectionFind,
     NewyearprolistAdd,
-    Newyearprolist2Add
+    NewyearprolistFind,
+    Newyearprolist2Add,
+    Newyearprolist2Find
 }

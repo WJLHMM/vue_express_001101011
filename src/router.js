@@ -10,10 +10,11 @@ import mycart from './main/mycart.vue'
 import myinfo from './main/myinfo.vue'
 import login from './main/login.vue'
 import register from './main/register.vue'
-import userinfodbadd from './main/userinfodbadd.vue'
 import productlist from './main/productlist.vue'
 import productdetail from './main/productdetail.vue'
 import catalogynav from './main/subpage/Commoditynav-subpage/catalogynav.vue';
+import userinfodbadd from './main/userinfodbadd.vue'
+import commoditynavdbadd from './main/Commoditynavdbadd.vue'
 
 var router = new VueRouter({
 	routes:[//
@@ -35,7 +36,8 @@ var router = new VueRouter({
 		{ path:'/myinfo',component:myinfo},	
 		{ path:'/login',component:login},	
 		{ path:'/register',component:register},	
-		{ path:'/userinfodbadd',component:userinfodbadd},	
+		{ path:'/userinfodbadd',component:userinfodbadd},
+		{ path:'/commoditynavdbadd',component:commoditynavdbadd},	
 		{ path:'/productlist',component:productlist},	
 		{ path:'/productdetail',component:productdetail},	
 	],

@@ -2,8 +2,8 @@
 <template>
 
 	<mt-swipe :auto="4000" vertical="true">
-		<mt-swipe-item v-for="item in parindswpier" :key="item.id">
-			<img :src="item.imgUrl" alt="homepic" class="swiperimg">
+		<mt-swipe-item v-for="item in parindswpier" :key="item._id">
+			<img :src="item.avaterurl" alt="homepic" class="swiperimg">
 		</mt-swipe-item>
 		
 	</mt-swipe>

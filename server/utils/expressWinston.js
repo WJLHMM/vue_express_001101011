@@ -77,7 +77,7 @@ const loggerWin = winston.createLogger({
 loggerWin.configure({
   transports: [
     new winstonDailyRotateFile({ 
-      filename: path.join(process.cwd(),'logs', 'errorWin-%DATE%.log'),
+      filename: path.join(__dirname,'../','logs', 'errorWin-%DATE%.log'),
       datePattern: 'YYYYMMDD',
       level: 'error' ,
       colorize: false,
@@ -86,7 +86,7 @@ loggerWin.configure({
       )
     }),
     new winstonDailyRotateFile({ 
-      filename: path.join(process.cwd(),'logs','combinedWin-%DATE%.log'),
+      filename: path.join(__dirname,'../','logs','combinedWin-%DATE%.log'),
       // filename: path.join(process.cwd(),'logs',`combinedWin${datashow}.log`),
       datePattern: 'YYYYMMDD',
       level: 'info' ,

@@ -19,12 +19,7 @@ module.exports = {
 			// 将mui引用变为全局变量，可以在该插件中配置
        		mui: "mui",
         	"window.mui": "mui"
-	    }),
-	    // new webpack.DefinePlugin({
-	    //    // 'process.env': require('../config/dev.env')
-	    //    'process.env': NODE_ENV: isDev ? '"development"' : '"production"'
-	    // }),
-
+	    })
 	],
 	module:{
 		rules:[

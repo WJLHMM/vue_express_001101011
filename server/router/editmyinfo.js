@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 let RedisGetdata =() => {
     return new Promise((resolve,reject)=> {
@@ -20,8 +20,8 @@ router.post('/api/editmyinfo', async (req, res, next)=> {
     //     next()
     // })
     req.session.username = await RedisGetdata()
-    console.log('editminfo-seesion.username',req.session.username)
-    console.log('editminfo-username',username) 
+    // console.log('editminfo-seesion.username',req.session.username)
+    // console.log('editminfo-username',username) 
 
     if(username = req.session.username) {
         UserinfoFind({"username":username})
@@ -34,7 +34,7 @@ router.post('/api/editmyinfo', async (req, res, next)=> {
                 if(docs.ok==1) {
                     res.json({'statuscode':1,'msg':'您的昵称已经修改成功'})
                 }else{
-                    res.json({'statuscode':0,'msg':'您的昵称名称不符合规则'})
+                    res.json({'statuscode':0,'msg':'您的昵称不符合规则'})
                 }
                 
             })

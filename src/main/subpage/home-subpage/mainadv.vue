@@ -1,9 +1,15 @@
 
 <template>
 	<div class="mainadv">
-		<div class="indbrandshow1">
-			<div class="indbrandshow1img1" v-for="item in parindbrandshow " :key="item.id">
+		<div class="indbrandshow1" v-for="item in parindbrandshow " :key="item._id">
+			<div class="indbrandshow1img1" >
 	  			<img :src="item.imgUrl" class="brandshowimg"/>
+	  		</div>
+	  		<div class="indbrandshow1img1" >
+	  			<img :src="item.avaterurl2" class="brandshowimg"/>
+	  		</div>
+	  		<div class="indbrandshow1img1" >
+	  			<img :src="item.avaterurl3" class="brandshowimg"/>
 	  		</div>
 	
 	  	</div>

@@ -13,6 +13,26 @@
 		<newyearbordpro :parnewyearprolist='newyearprolist'></newyearbordpro>
 		<newyearboardend></newyearboardend>
 		<newyearbordpro2 :parnewyearprolist2='newyearprolist2'></newyearbordpro2>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 	</div>
 </template>
 
@@ -50,6 +70,7 @@ export default {
 	methods: {
 		getmjdindexlist() {
 				this.$http.get('mjdindex').then(res=> {
+					// console.log(res.body.data.newyearprolist2)
 					if(res.body.success) {
 						this.indswpier=[...res.body.data.indswpier],
 						this.indbrandshow=[...res.body.data.indbrandshow]
@@ -58,7 +79,6 @@ export default {
 						this.sksection=[...res.body.data.sksection]
 						this.newyearprolist=[...res.body.data.newyearprolist]
 						this.newyearprolist2=[...res.body.data.newyearprolist2]
-						// console.log(this.newyearprolist2)
 					}else {
 						Toast({
 						message: '读取数据失败',
