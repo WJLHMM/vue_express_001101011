@@ -1,4 +1,4 @@
-
+<!-- 此页面为register  myinfo 向数据库中添加数据 客户端 -->
 <template>
 	<div class="register">
 		<appheader></appheader>

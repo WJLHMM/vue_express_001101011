@@ -1,4 +1,5 @@
-=
+<!-- 此页面为Commoditynav向数据库中添加数据 客户端 -->
+
 <template>
 	<div class="commoditynav" 
 		onmousewheel="return false;"
@@ -25,46 +26,53 @@ export default {
 			catalogyList:[],
 			catalogyListdetail:[],
 			catalogynavheader:'',
-			id:'',
+			paramsid:'',
 			cid:''
 			
 		}
 	},
 	methods: {
+
 		getcatalogyList() {
-			this.$http.get('searchbycatagrorty').then(res=> {
-			if(res.body.success) {
-				this.catalogyList=[...res.body.data.catalogyList]
-				this.catalogyListdetail=[...res.body.data.catalogyList[0].WQR2006]
-				this.catalogynavheader=res.body.data.catalogyList[0].name
-			}	
-			else {Toast({
-				message: '读取数据失败',
-				position: 'middle',
-				duration: 3000
-				});
-			}
-		}, (e) => {
-			console.log(e)
-		})
+			this.paramsid = this.$route.params.paramsid
+			this.cid = this.$route.params.cid
+			let { paramsid,cid } = this.$route.params
+			this.$http.post('searchbycatagrorty',{paramsid,cid},{}).then(res=> {
+			  if(res.body.success) {
+			  	this.catalogyList=[...res.body.data.catalogyList]
+			  	this.catalogyListdetail=[...res.body.data.catalogyList[0].WQR2006]
+			  	this.catalogynavheader=res.body.data.catalogyList[0].name
+			  }	
+			  else {Toast({
+			  	message: '读取数据失败',
+			  	position: 'middle',
+			  	duration: 3000
+			  	});
+			  }
+			}, (e) => {
+			 	console.log(e)
+			})
 		},
 		getcatalogyList2() {
-			this.$http.get('searchbycatagrorty').then(res=> {
-			if(res.body.success) {
-				this.catalogyListdetail=[...res.body.data.catalogyList[this.id][this.cid]]
-				this.catalogynavheader=res.body.data.catalogyList[this.id].name
-				// console.log(this.catalogyListdetail)
-			}else {
-				Toast({
-				message: '读取数据失败',
-				position: 'middle',
-				duration: 3000
-				});
-			}
-		}, (e) => {
-			console.log(e)
-		})
-		}
+			this.paramsid = this.$route.params.paramsid
+			this.cid = this.$route.params.cid
+			let { paramsid,cid } = this.$route.params
+			this.$http.post('searchbycatagrorty',{paramsid,cid},{}).then(res=> {
+			  if(res.body.success) {
+				this.catalogyListdetail=[...res.body.data.catalogyList[this.paramsid][this.cid]]
+				this.catalogynavheader=res.body.data.catalogyList[this.paramsid].name
+			  }	
+			  else {Toast({
+			  	message: '读取数据失败',
+			  	position: 'middle',
+			  	duration: 3000
+			  	});
+			  }
+			}, (e) => {
+			 	console.log(e)
+			})
+		},
+
 	},
 	components: {
 		search,
@@ -77,7 +85,7 @@ export default {
 	watch: {
 	  $route: {
 	    handler: function(val, oldVal){
-	      this.id = val.params.id;
+	      this.paramsid = val.params.paramsid;
 	      this.cid = val.params.cid;
 	   	  this.getcatalogyList2()
 

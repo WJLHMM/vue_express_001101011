@@ -1,4 +1,4 @@
-
+<!-- 此页面为分类查询数据添加 面板 -->
 <template>
 	<div class="register">
 		<appheader></appheader>

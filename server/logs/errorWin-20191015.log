@@ -1,0 +1,32 @@
+error:2019-10-15 08:16:47[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
+error:2019-10-15 08:18:14[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+error:2019-10-15 08:20:44[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+error:2019-10-15 08:20:44[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+error:2019-10-15 08:29:32[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+error:2019-10-15 08:29:32[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
+error:2019-10-15 08:40:59[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+error:2019-10-15 08:41:01[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+error:2019-10-15 08:41:04[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+error:2019-10-15 08:41:06[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+error:2019-10-15 08:41:09[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+error:2019-10-15 08:41:13[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+error:2019-10-15 08:41:18[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+error:2019-10-15 08:41:25[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+error:2019-10-15 08:41:35[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+error:2019-10-15 08:41:51[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+error:2019-10-15 08:44:05[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+error:2019-10-15 08:44:05[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+error:2019-10-15 08:44:05[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-15 08:49:42[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-15 08:53:24[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-15 08:53:33[right meow!]  userlogininfl 错误主页 GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-15 20:21:56[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-15 20:21:58[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-15 20:22:00[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-15 20:22:03[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-15 20:22:06[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-15 20:22:09[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-15 20:22:14[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-15 20:22:21[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-15 20:22:31[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-15 20:22:47[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379

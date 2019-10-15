@@ -56,7 +56,27 @@ const CatalogyListFind = (keyObj={}) => {
     });
 }
 
+const CatalogyListaggfind = (keyObj={"cid":'WQR2006'}) => {
+    return new Promise((resolve,reject)=> {
+        CatalogyListModel.aggregate([
+        {
+            $match: keyObj
+        },
+        {
+            $lookup: {
+                from: 'productcatas',
+                localField: "cid",
+                foreignField: "0cid",
+                as: `${keyObj.cid}`
+            }
+        }
+        ],  (err, docs) =>{
+            if (err) reject(err)
+            resolve(JSON.parse(JSON.stringify(docs)))
+        })
+    })
 
+}
 const ProductCataSchema = {
     "level": {
         type:Number,
@@ -97,11 +117,15 @@ const ProductCataFind = (keyObj={}) => {
         })
     });
 }
+
+
+
 module.exports = {
    CatalogyListModel,
    CatalogyListAdd,
    CatalogyListAddMany,
    CatalogyListFind,
+   CatalogyListaggfind,
    ProductCataAddMany,
    ProductCataModel,
    ProductCataFind

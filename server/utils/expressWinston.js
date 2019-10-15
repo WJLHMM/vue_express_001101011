@@ -45,7 +45,7 @@ const loggerWin = winston.createLogger({
   level: 'info',
   format: combine(
     label({ label: 'right meow!' }),
-    // format.colorize(),  打印台同文件写入中颜色 无法同时实现
+    format.colorize(),   // 打印台同文件写入中颜色 无法同时实现
     format.errors({ stack: true }),
     myFormat
   ),

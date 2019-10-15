@@ -139,7 +139,7 @@ export default {
 
 	},
 	created(){
-		//确定明天的事件数据
+		//确定明天的时间数据
 		this.tomorrowdatedd = this.tomorrowdate.setDate(this.tomorrowdate.getDate()+1)
 	},
 	props:['parproductitem']

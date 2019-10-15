@@ -28,7 +28,7 @@ var router = new VueRouter({
 			component:commoditynav,
 			children: [
 				{ path:'',redirect:'0/WQR2006'},
-				{ path:':id/:cid',component:catalogynav}
+				{ path:':paramsid/:cid',component:catalogynav}
 			]
 
 		},	

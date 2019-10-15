@@ -1,6 +1,8 @@
 const redis = require('redis')
 
 const { REDIS_CONF } = require('../../config/db.js')
+const { loggerWin } = require('../../utils/expressWinston.js')
+
 
 client = redis.createClient(
     `${REDIS_CONF.port}`,
@@ -10,10 +12,14 @@ client = redis.createClient(
 );
 
 client.info((err,response)=>{
-    if(err) throw err
-    console.log(`redis connect ${REDIS_CONF.port},${REDIS_CONF.host}`);
+    if(err) {
+    	 loggerWin.error(`${err}`)
+    }
+    loggerWin.info (`redis connect ${REDIS_CONF.port},${REDIS_CONF.host}`)
+    // console.log(``);
 });
 
 client.on("error", (err)=> {
-    console.log("Error " + err);
+    loggerWin.error(`${err}`)
+    // console.log("Error " + err);
 });

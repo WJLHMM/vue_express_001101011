@@ -24,8 +24,7 @@ const  {
 router.get('/api/mjdindex',async ( req, res, next )=> {
 	
 	loggerWin.info (`${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
-    loggerWin.error(`userlogininfl 错误主页 ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
-
+  
     let ResData = {
 		"success":true,
 		"data":{
@@ -49,25 +48,37 @@ router.get('/api/mjdindex',async ( req, res, next )=> {
 		}
 	}
 
-    let indswpierdata = await IndswpierFind()
+    let indswpierdata = await IndswpierFind().catch(err=> {
+    	loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+    })
     ResData.data.indswpier = [ ...indswpierdata ]
 
-    let indbrandshowdat = await IndbrandshowFind()
+    let indbrandshowdat = await IndbrandshowFind().catch(err=> {
+    	loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+    })
     ResData.data.indbrandshow = [ ...indbrandshowdat ]
 
     let boxlistdata = await BoxlistFind() 
 	ResData.data.boxlist = [ ...boxlistdata ]
 
-    let indscrollnewstextdata = await IndscrollnewstextFind()
+    let indscrollnewstextdata = await IndscrollnewstextFind().catch(err=> {
+    	loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+    })
 	ResData.data.indscrollnewstext = [ ...indscrollnewstextdata ]
 
-    let sksectiondata = await SksectionFind()  
+    let sksectiondata = await SksectionFind().catch(err=> {
+    	loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+    })  
 	ResData.data.sksection = [ ...sksectiondata ]
 
-    let newyearprolistdata = await NewyearprolistFind()
+    let newyearprolistdata = await NewyearprolistFind().catch(err=> {
+    	loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+    })
 	ResData.data.newyearprolist = [ ...newyearprolistdata ]
 
-    let newyearprolist2data = await Newyearprolist2Find()
+    let newyearprolist2data = await Newyearprolist2Find().catch(err=> {
+    	loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+    })
 	ResData.data.newyearprolist2 = [ ...newyearprolist2data ]
 
 	res.json(ResData)
