@@ -9,7 +9,7 @@
 						ref="username" 
 						type="text" 
 						class="mui-input-clear" 
-						placeholder="用户名/邮箱/手机号"
+						placeholder="用户名"
 					
 					>
 				</div>

@@ -4,6 +4,7 @@ const redis = require('redis')
 
 //引入添加数据方法
 const { UserlogininFind } = require('../db/mongodb/userlogininflSchema.js')
+const { RedisGetdata } = require('../db/redis/redisoperation.js')
 const { genPassword } = require('../utils/crypto.js')
 const { userLoginPost } = require('../utils/validate.js')
 const { loggerWin } = require('../utils/expressWinston.js')
@@ -29,18 +30,22 @@ router.post('/api/userlogininfl', (req, res, next)=> {
     password = genPassword(password)
     let keyObj = { username,password }
   
-    UserlogininFind().then(data=> {
+    UserlogininFind().then( async (data)=> {
         if(data.length!=0) {
             let m = data.some(item => 
                item.username===keyObj.username&&item.password===keyObj.password
             )
             if(m) {
                 client.set("username",username, redis.print)
-                client.get('username',(err,res)=> {
-                    if(err) throw err
-                    req.session.username=res
-                    console.log('userlogininfl-seesion.username',req.session.username)
-                })
+                req.session.name = await RedisGetdata('username') 
+                console.log('userlongininf',req.session.name)
+                // client.get('username',(err,res)=> {
+                //     if(err) {
+                //         loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
+                //     }
+                //     req.session.username=res
+                //     // console.log('userlogininfl-seesion.username',req.session.username)
+                // })
                 loggerWin.info(`${req.session.username}登录成功 -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
                 return res.send({'statuscode':1,'msg':"登录成功"})
             }else {

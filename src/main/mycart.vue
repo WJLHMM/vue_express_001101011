@@ -81,9 +81,9 @@ export default {
 		settlementfooter
 	},
 	created(){
-		if(this.$route.fullPath=='/mycart') {
-			this.title = '购物车'
-		}
+		// if(this.$route.fullPath=='/mycart') {
+		// 	this.title = '购物车'
+		// }
 		this.getshopcartlist()
 	},
     computed: {

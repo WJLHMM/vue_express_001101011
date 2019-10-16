@@ -39,27 +39,29 @@ export default {
 			let dataObj =JSON.parse(window.JSON.stringify(this.$refs.dataObj.value))
 			// console.log(dataObj)
 	
-			this.$http.post('catalistdataadd',dataObj,{})
+			// this.$http.post('catalistdataadd',dataObj,{})
+			// .then((response)=>{
+			// 	console.log(response)
+			// 	mui.toast(
+			// 		`${response.body.msg}`,
+			// 		{ duration:900, type:'div' }
+			// 	)				
+			// },(response)=>{
+			// 	console.log('noconnect',response.data)
+			// })	
+
+			this.$http.post('productlistdbadd',dataObj,{})
 			.then((response)=>{
 				console.log(response)
-				// mui.toast(
-				// 	`${response.body.msg}`,
-				// 	{ duration:900, type:'div' }
-				// )				
+				mui.toast(
+					`${response.body.msg}`,
+					{ duration:900, type:'div' }
+				)				
 			},(response)=>{
 				console.log('noconnect',response.data)
 			})
 			
-			// this.$http.post('productcata',dataObj,{})
-			// .then((response)=>{
-			// 	console.log(response)
-			// 	// mui.toast(
-			// 	// 	`${response.body.msg}`,
-			// 	// 	{ duration:900, type:'div' }
-			// 	// )				
-			// },(response)=>{
-			// 	console.log('noconnect',response.data)
-			// })
+		
 		}
 	},
 	components: {

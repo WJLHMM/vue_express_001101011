@@ -1,6 +1,9 @@
 
 <template>
-	<div class="container">
+	<div 
+		class="container"
+		:style="{ 'border-bottom':isFooterShow?' ':'1px solid #808080'}"
+	>
 		
 		<router-view></router-view>
 	
@@ -73,6 +76,7 @@ html, body {
 	.container {
 		display:flex;
 		/* height: 100%; */
+		/* height: 667px; */
 		border-left: 1px solid #888;
 		border-right: 1px solid #888;
 		/* border-bottom: 1px solid #888; */

@@ -1,3 +1,4 @@
+/* GET register page API. */
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose')
@@ -7,10 +8,9 @@ const mongoose = require('mongoose')
 const { UserlogininFind:RegisterFind, RegisterAdd} = require('../db/mongodb/userlogininflSchema.js')
 const { genPassword } = require('../utils/crypto.js')
 const { userLoginPost:registerPost } = require('../utils/validate.js')
+const { loggerWin } = require('../utils/expressWinston.js')
 
-/* GET register page. */
 router.post('/api/register', (req, res, next)=> {
-  console.log(req.body)
  
   const  username = req.body.username
   let  password = req.body.password
@@ -19,12 +19,12 @@ router.post('/api/register', (req, res, next)=> {
   let dataObj = { username,password }
 
   const errors = registerPost.validate(dataObj)
-  // console.log(errors)
-  // if (errors)  throw errors
+
   if(errors.length!= 0) {
     // return  result = console.log(`{${errors[0].path}:${errors[0].message}}`)
-     result =`${errors[0].path}:${errors[0].message}`
+     // result =`${errors[0].path}:${errors[0].message}`
      result =`${errors[0].message}`
+     loggerWin.error(`${result} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
      return res.send({"statuscode":0,"msg":result})
   }
 
@@ -32,9 +32,9 @@ router.post('/api/register', (req, res, next)=> {
   keyObj = {'username':username}
 
   RegisterFind(keyObj).then(data=> {
-     console.log(data)
      if(data.length!=0) {
        //注意then后面是异步操作，所以如果如果不重名以后的保存，需要放在else里面操作
+        loggerWin.error(`您所注册的用户名已经被注册 -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
        return res.send({'statuscode':0,'msg':"您所注册的用户名已经被注册"})
      }else {
       //将最终符合要求的数据存入数据库

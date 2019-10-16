@@ -1,4 +1,4 @@
-/*本段为客户端添加数据到数据库的接口*/
+/*本段为客户端添加 用户 信息 数据到数据库的模型 方法 接口*/
 
 const mongoose = require('mongoose')
 
@@ -20,6 +20,7 @@ const UserinfoSchema = {
     "nickname":{ 
         type:String,
         maxlength:20,
+        minlength:1,
         default:'我是时尚人'
     },
     "grade":{
@@ -64,7 +65,7 @@ const UserinfoAdd = (dataObj={})=> {
 
 const UserinfoUpdate = (currentdata,updateddata)=> {
     return new Promise((resolve,reject)=> {
-        UserinfoModel.update(currentdata, updateddata, (err, docs)=>{
+        UserinfoModel.updateOne(currentdata, updateddata,{ runValidators: true }, (err, docs)=>{
             if (err) reject(err)
             resolve(docs) 
         })

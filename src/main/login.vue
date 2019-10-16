@@ -9,7 +9,7 @@
 						ref="username" 
 						type="text" 
 						class="mui-input-clear" 
-						placeholder="用户名/邮箱/已验证手机"
+						placeholder="用户名"
 					>
 				</div>
 				<div class="mui-input-row mui-password">

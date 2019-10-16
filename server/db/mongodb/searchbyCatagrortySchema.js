@@ -1,4 +1,4 @@
-/*本段为客户端添加数据到数据库的接口*/
+/*本段为客户端添加 searchBycatagrorty数据到数据库的模型方法接口*/
 
 const mongoose = require('mongoose')
 
@@ -7,7 +7,7 @@ const CatalogyListSchema = {
         type:Number,
         trim: true,
         require:true,
-        default:0
+        default:1
     },
     "name":{
         type:String,

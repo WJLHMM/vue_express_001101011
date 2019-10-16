@@ -1,7 +1,9 @@
 
 <template>
-<div class="muibarfixedcontainer">
-	<nav class="mui-bar mui-bar-tab">
+<div 
+	class="muibarfixedcontainer">
+		border-bottom: 1px solid #888;
+	<nav class="mui-bar mui-bar-tab" >
 		<router-link to='/home'class="mui-tab-item mui-active" >
 			<span class="mui-icon mui-icon-home"></span>
 			<span class="mui-tab-label">首页</span>
@@ -72,6 +74,7 @@ export default {
 	height:50px;
 	bottom:0;
 	z-index: 100;
+	border-right: 1px solid #888;
 	.mui-bar-tab {
 		display:flex;
 		max-width: 638px;

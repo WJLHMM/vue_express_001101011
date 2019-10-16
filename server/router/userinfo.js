@@ -1,12 +1,32 @@
-var express = require('express');
-var router = express.Router();
+/*所有 数据输入数据库 后台接口*/
 
-const  { 
-    UserinfoFind,
-    UserinfoAdd
-} = require('../db/mongodb/userinfoSchema.js')
+const express = require('express');
+const router = express.Router();
 
-const  { 
+{
+
+    const  { 
+        UserinfoFind,
+        UserinfoAdd
+    } = require('../db/mongodb/userinfoSchema.js')
+
+
+    const { loggerWin } = require('../utils/expressWinston.js')
+
+    router.post('/api/userinfo',async (req, res, next)=> {
+        let { username } = req.body.username
+        UserinfoAdd(req.body).then(data=>{
+            res.json({'statuscode':1,'msg':'您已经成功添加' + data.username+'用户的信息'})
+        }).catch(err=> {
+           loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
+           res.json(err.stack)
+        })
+
+    })
+}
+
+{
+    const  { 
     IndswpierAdd,
     IndbrandshowAdd,
     BoxlistAdd,
@@ -14,121 +34,130 @@ const  {
     SksectionAdd,
     NewyearprolistAdd,
     Newyearprolist2Add
-} = require('../db/mongodb/homePageDataSchema.js')
+    } = require('../db/mongodb/homePageDataSchema.js')
 
-router.post('/api/userinfo',async (req, res, next)=> {
-    console.log('/api/userinfo',req.body)
-    let { username } = req.body.username
-    UserinfoAdd(req.body).then(data=>{
-        res.json({'statuscode':1,'msg':'您已经成功添加' + data.username+'用户的信息'})
-    }).catch(err=> {
-       res.json(err.stack)
-    })
-
-})
-
-{
     router.post('/api/indswpier',async (req, res, next)=> {
-        console.log('/api/indswpier',req.body)
-        // let { username } = req.body.username
         IndswpierAdd(req.body).then(data=>{
             res.json({'statuscode':1,'msg':'您已经成功添加' + data.title+'的信息'})
         }).catch(err=> {
+           loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
            res.json(err.stack)
         })
 
     })
 
     router.post('/api/indbrandshow',async (req, res, next)=> {
-        console.log('/api/indbrandshow',req.body)
-        // let { username } = req.body.username
         IndbrandshowAdd(req.body).then(data=>{
             res.json({'statuscode':1,'msg':'您已经成功添加' + data.company+'的信息'})
         }).catch(err=> {
+           loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
            res.json(err.stack)
         })
 
     })
 
     router.post('/api/boxlist',async (req, res, next)=> {
-        console.log('/api/indbrandshow',req.body)
-        // let { username } = req.body.username
         BoxlistAdd(req.body).then(data=>{
             res.json({'statuscode':1,'msg':'您已经成功添加' + data.title+'的信息'})
         }).catch(err=> {
-        	console.log(err.stack)
+           loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
            res.json(err.stack)
         })
 
     })
 
     router.post('/api/indscrollnewstext',async (req, res, next)=> {
-        console.log('/api/indscrollnewstext',req.body)
         IndscrollnewstextAdd(req.body).then(data=>{
             res.json({'statuscode':1,'msg':'您已经成功添加' + data.company +'的信息'})
         }).catch(err=> {
-        	console.log(err.stack)
+           loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
            res.json(err.stack)
         })
 
     })
 
     router.post('/api/sksection',async (req, res, next)=> {
-        console.log('/api/sksection',req.body)
         SksectionAdd(req.body).then(data=>{
             res.json({'statuscode':1,'msg':'您已经成功添加' + data.productname +'的信息'})
         }).catch(err=> {
-        	console.log(err.stack)
+           loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
            res.json(err.stack)
         })
 
     })
 
     router.post('/api/newyearprolist',async (req, res, next)=> {
-        console.log('/api/newyearprolist',req.body)
         NewyearprolistAdd(req.body).then(data=>{
             res.json({'statuscode':1,'msg':'您已经成功添加' + data.productname +'的信息'})
         }).catch(err=> {
-        	console.log(err.stack)
+           loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
            res.json(err.stack)
         })
 
     })
 
     router.post('/api/newyearprolist2',async (req, res, next)=> {
-        console.log('/api/newyearprolist2',req.body)
         Newyearprolist2Add(req.body).then(data=>{
             res.json({'statuscode':1,'msg':'您已经成功添加' + data.productname +'的信息'})
         }).catch(err=> {
-        	console.log(err.stack)
+           loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
            res.json(err.stack)
         })
 
     })
 }
 
-const { 
-    CatalogyListAddMany,
-    ProductCataAddMany
+{
+    const { 
+        CatalogyListAddMany,
+        ProductCataAddMany
+    } = require('../db/mongodb/searchbyCatagrortySchema.js')
+
+    router.post('/api/catalistdataadd',async (req, res, next)=> {
+        CatalogyListAddMany(req.body).catch(err=> {
+            loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+            res.send(`${err.stack}`)
+        })
+        
+        res.send({'statuscode':1,'msg':'您已经成功添加信息'})
+
+    })
+
+    router.post('/api/productcata',async (req, res, next)=> {
+        console.log(req.body)
+        ProductCataAddMany(req.body).catch(err=> {
+            loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+            res.send(`${err.stack}`)
+        })
+        
+        res.send({'statuscode':1,'msg':'您已经成功添加信息'})
+
+    })
+}
+
+{
+    const  { 
+       AppleProductsListAdd,
+       AppleProductsListAddMany,
+       AppleProductsListFind,
+       AppleProductsListaggfind
+    } = require('../db/mongodb/productlistSchema.js')
+
+    const { loggerWin } = require('../utils/expressWinston.js')
+
+    router.post('/api/productlistdbadd',async (req, res, next)=> {
+        console.log(req.body)
+        AppleProductsListAddMany(req.body).catch(err=> {
+            loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+            res.send(`${err.stack}`)
+        })
+        
+        res.send({'statuscode':1,'msg':'您已经成功添加信息'})
+       
+
+    })
 
 
-} = require('../db/mongodb/searchbyCatagrortySchema.js')
-
-router.post('/api/catalistdataadd',async (req, res, next)=> {
-    // console.log(req.body)
-    CatalogyListAddMany(req.body)
-    
-    res.send({'statuscode':1,'msg':'您已经成功添加信息'})
-
-})
-
-router.post('/api/productcata',async (req, res, next)=> {
-    console.log(req.body)
-    ProductCataAddMany(req.body)
-    
-    res.send({'statuscode':1,'msg':'您已经成功添加信息'})
-
-})
-
+}
 
 module.exports = router

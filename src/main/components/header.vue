@@ -92,6 +92,7 @@ export default {
 		max-width: 638px;
 		background-color: #fff;
 		z-index: 10;
+		border:1px solid #808080;
 	}
 
 

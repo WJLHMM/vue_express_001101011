@@ -19,10 +19,12 @@ const  {
     Newyearprolist2Find,
 } = require('../db/mongodb/homePageDataSchema.js')
 
-
+const  { RedisGetdata } = require('../db/redis/redisoperation.js')
 
 router.get('/api/mjdindex',async ( req, res, next )=> {
-	
+
+    req.session.username = await RedisGetdata('username')
+	console.log(req.session.username)
 	loggerWin.info (`${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
   
     let ResData = {
