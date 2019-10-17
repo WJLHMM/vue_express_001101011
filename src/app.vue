@@ -2,7 +2,6 @@
 <template>
 	<div 
 		class="container"
-		:style="{ 'border-bottom':isFooterShow?' ':'1px solid #808080'}"
 	>
 		
 		<router-view></router-view>

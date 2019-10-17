@@ -10,7 +10,7 @@
 					tag="li"
 					class="catalogyitem" 
 					v-for="(item,index) in parcatalogyListdetail" 
-					:key="item.cid"
+					:key="item._id"
 				>
 					<img :src="item.imgurl">
 					<span>{{item.productname}}</span>

@@ -25,7 +25,7 @@ export default {
 	},
 	methods: {
 		getproductlistdata() {
-			this.$http.get('productlist').then(res=> {
+			this.$http.post('productlist',{"cid":this.productlistname}).then(res=> {
 				if(res.body.success) {
 					this.productlist=[...res.body.data[this.productlistname]]
 				}else {
@@ -48,8 +48,8 @@ export default {
 		productlistitem
 	},
 	created(){
-		this.getproductlistdata()
 		this.productlistname = this.$route.query.item
+		this.getproductlistdata()
 	},
 	destroyed() {
 		this.productlist={},

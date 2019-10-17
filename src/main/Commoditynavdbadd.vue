@@ -48,9 +48,31 @@ export default {
 			// 	)				
 			// },(response)=>{
 			// 	console.log('noconnect',response.data)
-			// })	
+			// }),
 
-			this.$http.post('productlistdbadd',dataObj,{})
+			// this.$http.post('productlistdbadd',dataObj,{})
+			// .then((response)=>{
+			// 	console.log(response)
+			// 	mui.toast(
+			// 		`${response.body.msg}`,
+			// 		{ duration:900, type:'div' }
+			// 	)				
+			// },(response)=>{
+			// 	console.log('noconnect',response.data)
+			// }),
+
+			// this.$http.post('sellerlistadd',dataObj,{})
+			// .then((response)=>{
+			// 	console.log(response)
+			// 	mui.toast(
+			// 		`${response.body.msg}`,
+			// 		{ duration:900, type:'div' }
+			// 	)				
+			// },(response)=>{
+			// 	console.log('noconnect',response.data)
+			// }),	
+
+			this.$http.post('appraiseinfoadd',dataObj,{})
 			.then((response)=>{
 				console.log(response)
 				mui.toast(

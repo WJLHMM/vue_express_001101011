@@ -1,6 +1,6 @@
 /* GET Commoditynav page. */
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 const { 
   CatalogyListFind,
@@ -21,7 +21,7 @@ let ResData = {
 }
 
 router.post('/api/searchbycatagrorty', async (req, res, next)=> {
-   console.log(req.body)
+   // console.log(req.body)
 
    let { paramsid, cid} = req.body
 

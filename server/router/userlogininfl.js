@@ -38,14 +38,6 @@ router.post('/api/userlogininfl', (req, res, next)=> {
             if(m) {
                 client.set("username",username, redis.print)
                 req.session.name = await RedisGetdata('username') 
-                console.log('userlongininf',req.session.name)
-                // client.get('username',(err,res)=> {
-                //     if(err) {
-                //         loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
-                //     }
-                //     req.session.username=res
-                //     // console.log('userlogininfl-seesion.username',req.session.username)
-                // })
                 loggerWin.info(`${req.session.username}登录成功 -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
                 return res.send({'statuscode':1,'msg':"登录成功"})
             }else {

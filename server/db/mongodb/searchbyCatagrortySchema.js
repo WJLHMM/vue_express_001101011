@@ -66,7 +66,7 @@ const CatalogyListaggfind = (keyObj={"cid":'WQR2006'}) => {
             $lookup: {
                 from: 'productcatas',
                 localField: "cid",
-                foreignField: "0cid",
+                foreignField: "cid",
                 as: `${keyObj.cid}`
             }
         }

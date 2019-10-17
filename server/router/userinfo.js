@@ -3,15 +3,14 @@
 const express = require('express');
 const router = express.Router();
 
+const { loggerWin } = require('../utils/expressWinston.js')
+
 {
 
     const  { 
         UserinfoFind,
         UserinfoAdd
     } = require('../db/mongodb/userinfoSchema.js')
-
-
-    const { loggerWin } = require('../utils/expressWinston.js')
 
     router.post('/api/userinfo',async (req, res, next)=> {
         let { username } = req.body.username
@@ -137,27 +136,58 @@ const router = express.Router();
 
 {
     const  { 
-       AppleProductsListAdd,
-       AppleProductsListAddMany,
-       AppleProductsListFind,
-       AppleProductsListaggfind
+       ProductsListAdd,
+       ProductsListAddMany,
+       ProductsListFind,
+       ProductsListaggfind
     } = require('../db/mongodb/productlistSchema.js')
-
-    const { loggerWin } = require('../utils/expressWinston.js')
 
     router.post('/api/productlistdbadd',async (req, res, next)=> {
         console.log(req.body)
-        AppleProductsListAddMany(req.body).catch(err=> {
+        ProductsListAddMany(req.body).catch(err=> {
             loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
             res.send(`${err.stack}`)
         })
         
         res.send({'statuscode':1,'msg':'您已经成功添加信息'})
-       
-
     })
 
 
+}
+
+
+{
+
+    const { 
+       
+        SellerinfoListAddMany,
+        SellerinfoListFind,
+        SellerinfoListaggfind,
+        AppraiseinfoAddMany,
+        AppraiseinfoFind,
+        Appraiseinfoaggfind
+    } = require('../db/mongodb/productdetaillistSchema.js')
+
+   
+
+    router.post('/api/sellerlistadd',async (req, res, next)=> {
+        SellerinfoListAddMany(req.body).catch(err=> {
+            loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+            res.send(`${err.stack}`)
+        })
+        
+        res.send({'statuscode':1,'msg':'您已经成功添加信息'})
+    })  
+
+    router.post('/api/appraiseinfoadd',async (req, res, next)=> {
+        console.log(req.body)
+        AppraiseinfoAddMany(req.body).catch(err=> {
+            loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+            res.send(`${err.stack}`)
+        })
+        
+        res.send({'statuscode':1,'msg':'您已经成功添加信息'})
+    })
 }
 
 module.exports = router

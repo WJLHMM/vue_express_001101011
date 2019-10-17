@@ -1,15 +1,15 @@
-/*本段为客户端添加 productist productdetaillist companylist 数据到数据库的模型方法接口*/
+/*本段为客户端添加 productist  数据到数据库的模型方法接口*/
 
 const mongoose = require('mongoose')
 
-const AppleProductsListSchema = {
+const ProductsListSchema = {
     "level": {
         type:Number,
         trim: true,
         require:true,
         default:2
     },
-    "2cid":{
+    "cid":{
         type:String,
         default:' '
     },
@@ -108,51 +108,59 @@ const AppleProductsListSchema = {
    
 }
 
-const AppleProductsListModel = mongoose.model('productlistdbadd',new mongoose.Schema(AppleProductsListSchema,{timestamps:{createdAt: 'created',updatedAt: 'updated'}}))
+const ProductsListModel = mongoose.model('productlistdbadd',new mongoose.Schema(ProductsListSchema,{timestamps:{createdAt: 'created',updatedAt: 'updated'}}))
 
 
-const AppleProductsListAdd = (dataObj={})=> {
+const ProductsListAdd = (dataObj={})=> {
     return new Promise((resolve,reject)=> {
-        const AppleProductsListModelinstance = new AppleProductsListModel(dataObj)
-        AppleProductsListModelinstance.save((err,docs)=> {
+        const ProductsListModelinstance = new ProductsListModel(dataObj)
+        ProductsListModelinstance.save((err,docs)=> {
             if(err) reject (err)
             resolve(docs)
         })
     })
 }
 
-const AppleProductsListAddMany = (dataArray=[])=> {
+const ProductsListAddMany = (dataArray=[])=> {
     return new Promise((resolve,reject)=> {
-        AppleProductsListModel.insertMany(dataArray,(err,docs)=> {
+        ProductsListModel.insertMany(dataArray,(err,docs)=> {
             if(err) reject (err)
             resolve(docs)
         })
     })
 }
 
-const AppleProductsListFind = (keyObj={}) => {
+const ProductsListFind = (keyObj={}) => {
     return new Promise((resolve, reject) => {
-        AppleProductsListModel.find(keyObj,(err,doc)=> {
+        ProductsListModel.find(keyObj,(err,doc)=> {
             if(err) return reject(err)
             resolve(doc)
         })
     });
 }
 
-const AppleProductsListaggfind = (keyObj={}) => {
+const ProductsListaggfind = (keyObj={}) => {
     return new Promise((resolve,reject)=> {
-        AppleProductsListModel.aggregate([
-        {
-            $match: keyObj
-        },
-        {
-            $lookup: {
-                from: 'productcatas',
-                localField: "cid",
-                foreignField: "0cid",
-                as: `${keyObj.cid}`
-            }
-        }
+        ProductsListModel.aggregate([
+            {
+                $match: keyObj
+            },
+            {
+                $lookup: {
+                    from: 'sellerinfolists',
+                    localField: "proseller",
+                    foreignField: "proseller",
+                    as: 'sellerinfo'
+                }
+            },
+            {
+                $lookup: {
+                    from: 'appraiseinfos',
+                    localField: "proname",
+                    foreignField: "proname",
+                    as: 'appraiseinfo'
+                }
+            },
         ],  (err, docs) =>{
             if (err) reject(err)
             resolve(JSON.parse(JSON.stringify(docs)))
@@ -161,10 +169,9 @@ const AppleProductsListaggfind = (keyObj={}) => {
 
 }
 
-
 module.exports = {
-   AppleProductsListAdd,
-   AppleProductsListAddMany,
-   AppleProductsListFind,
-   AppleProductsListaggfind
+   ProductsListAdd,
+   ProductsListAddMany,
+   ProductsListFind,
+   ProductsListaggfind
 }

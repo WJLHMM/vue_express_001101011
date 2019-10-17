@@ -35,7 +35,6 @@ router.post('/api/editmyinfo', async (req, res, next)=> {
             loggerWin.error(`${err} -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
             res.json(err)});
 
-        // res.json()
     }else{
         res.json({'statuscode':0,'msg':'请您重新登录修改昵称'})
     }

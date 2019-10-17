@@ -42,69 +42,70 @@ export default {
 	},
 	methods: {
 		getproductdetaillist() {
-			this.$http.get('productdetaillist').then(res=> {
-			if(res.body.success) {
-				this.productdetail=[...res.body.data]
-				this.productdetail.some((item,index)=> {
-					// 在数组的some方法中，如果return true;就会立刻终止这个数组的循环
-					if(this.proname==item.proname){
-						this.productitem =this.productdetail[index]
-						this.proname = this.productitem.proname
-						this.item = this.productitem.productitemname
-						// console.log(this.item)
-						return true;
-					}
-				})
-			}	
-			else {Toast({
-				message: '读取数据失败',
-				position: 'middle',
-				duration: 3000
-				});
-			}
-		}, (e) => {
-			console.log(e)
-		})
-		},
-		getsellerlist() {
-			this.$http.get('sellerlist').then(res=> {
-			if(res.body.success) {
-				this.sellerlist=[...res.body.data]
-				this.sellerlist.some((item,index)=> {
-					// 在数组的some方法中，如果return true;就会立刻终止这个数组的循环
-					if(this.proname==item.proname){
-						this.selleritem =this.sellerlist[index]
-						return true;
-					}
-				})
+			// console.log(this.proname)
+			this.$http.post('productdetaillist',{"proname":this.proname}).then(res=> {
 				
-			}	
-			else {Toast({
-				message: '读取数据失败',
-				position: 'middle',
-				duration: 3000
-				});
-			}
-		}, (e) => {
-			console.log(e)
-		})
-		},
-		getappaiseinfo() {
-			this.$http.get('appraiseinfo').then(res=> {
 				if(res.body.success) {
-					this.appraiseinfo = [...res.body.data]
-					this.appraiseinfo.some((item)=>{
-						if(this.proname===item.proname){
-							this.appraiseinfoitem = item
-							// console.log(this.appraiseinfoitem)
-						}
-					})
-				}
-			}),
-			(e)=>{
+					this.productitem=res.body.data[0]
+					this.proname = this.productitem.proname
+					this.item = this.productitem.cid
+					this.selleritem=[...this.productitem.sellerinfo]
+					console.log(this.selleritem)
+					this.appraiseinfoitem = [...this.productitem.appraiseinfo]
+					console.log(this.appraiseinfoitem)
+				}else	
+				    {
+					 	Toast({
+						message: '读取数据失败',
+						position: 'middle',
+						duration: 3000
+						});
+					}
+			}, (e) => {
 				console.log(e)
-			}
-		}
+			})
+		},
+		// getsellerlist() {
+		// 	this.$http.get('sellerlist').then(res=> {
+		// 	if(res.body.success) {
+		// 		this.sellerlist=[...res.body.data]
+		// 		this.sellerlist.some((item,index)=> {
+		// 			// 在数组的some方法中，如果return true;就会立刻终止这个数组的循环
+		// 			if(this.proname==item.proname){
+		// 				this.selleritem =this.sellerlist[index]
+		// 				return true;
+		// 			}
+		// 		})
+				
+		// 	}	
+		// 	else 
+		// 	{
+		// 			Toast({
+		// 				message: '读取数据失败',
+		// 				position: 'middle',
+		// 				duration: 3000
+		// 		   });
+		// 	}
+		// 	}, (e) => {
+		// 		console.log(e)
+		// 	})
+		// },
+		// getappaiseinfo() {
+		// 	this.$http.get('appraiseinfo').then(res=> {
+		// 		if(res.body.success) {
+		// 			this.appraiseinfo = [...res.body.data]
+		// 			this.appraiseinfo.some((item)=>{
+		// 				if(this.proname===item.proname){
+		// 					this.appraiseinfoitem = item
+		// 					// console.log(this.appraiseinfoitem)
+		// 				}
+		// 			})
+		// 		}
+		// 	}),
+		// 	(e)=>{
+		// 		console.log(e)
+		// 	}
+		// }
 	},
 	components: {
 		appheader,
@@ -119,8 +120,8 @@ export default {
 	created(){
 		this.proname = this.$route.query.proname
 		this.getproductdetaillist()
-		this.getsellerlist()
-		this.getappaiseinfo()
+		// this.getsellerlist()
+		// this.getappaiseinfo()
 	},
 	mounted(){
 	},
