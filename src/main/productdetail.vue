@@ -6,7 +6,10 @@
 		<productshow :parproductitem=productitem></productshow>	
 		<seller :parselleritem=selleritem></seller>
 		<divgap></divgap>
-		<appraisearea :parappraiseinfoitem = appraiseinfoitem></appraisearea>
+		<appraisearea 
+			:parappraiseinfoitem = appraiseinfoitem
+			:parappraiseinfoitem1 = appraiseinfoitem1
+		></appraisearea>
 		<operationbar :parproname=proname></operationbar>
  		<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
@@ -34,7 +37,8 @@ export default {
 			productdetail:[],
 			productitem:{},
 			appraiseinfo:[],
-			appraiseinfoitem:{},
+			appraiseinfoitem:[],
+			appraiseinfoitem1:{},
 			item:'',
 			proname:''
 
@@ -42,17 +46,20 @@ export default {
 	},
 	methods: {
 		getproductdetaillist() {
-			// console.log(this.proname)
 			this.$http.post('productdetaillist',{"proname":this.proname}).then(res=> {
 				
 				if(res.body.success) {
 					this.productitem=res.body.data[0]
+					this.appraiseinfoitem1.goodappraiseratio = this.productitem.goodappraiseratio
+					this.appraiseinfoitem1.goodappraisenum = this.productitem.goodappraisenum
+					this.appraiseinfoitem1.neuappraisenum = this.productitem.neuappraisenum
+					this.appraiseinfoitem1.badappraisenum = this.productitem.badappraisenum
+					this.appraiseinfoitem1.momentsnum = this.productitem.momentsnum
 					this.proname = this.productitem.proname
 					this.item = this.productitem.cid
-					this.selleritem=[...this.productitem.sellerinfo]
-					console.log(this.selleritem)
-					this.appraiseinfoitem = [...this.productitem.appraiseinfo]
-					console.log(this.appraiseinfoitem)
+					this.selleritem=this.productitem.sellerinfo[0]
+					this.appraiseinfoitem = this.productitem.appraiseinfo
+
 				}else	
 				    {
 					 	Toast({
@@ -65,47 +72,6 @@ export default {
 				console.log(e)
 			})
 		},
-		// getsellerlist() {
-		// 	this.$http.get('sellerlist').then(res=> {
-		// 	if(res.body.success) {
-		// 		this.sellerlist=[...res.body.data]
-		// 		this.sellerlist.some((item,index)=> {
-		// 			// 在数组的some方法中，如果return true;就会立刻终止这个数组的循环
-		// 			if(this.proname==item.proname){
-		// 				this.selleritem =this.sellerlist[index]
-		// 				return true;
-		// 			}
-		// 		})
-				
-		// 	}	
-		// 	else 
-		// 	{
-		// 			Toast({
-		// 				message: '读取数据失败',
-		// 				position: 'middle',
-		// 				duration: 3000
-		// 		   });
-		// 	}
-		// 	}, (e) => {
-		// 		console.log(e)
-		// 	})
-		// },
-		// getappaiseinfo() {
-		// 	this.$http.get('appraiseinfo').then(res=> {
-		// 		if(res.body.success) {
-		// 			this.appraiseinfo = [...res.body.data]
-		// 			this.appraiseinfo.some((item)=>{
-		// 				if(this.proname===item.proname){
-		// 					this.appraiseinfoitem = item
-		// 					// console.log(this.appraiseinfoitem)
-		// 				}
-		// 			})
-		// 		}
-		// 	}),
-		// 	(e)=>{
-		// 		console.log(e)
-		// 	}
-		// }
 	},
 	components: {
 		appheader,

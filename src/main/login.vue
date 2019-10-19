@@ -77,7 +77,7 @@ export default {
 					console.log('connect',response.body.statuscode)
 					if(response.body.statuscode === 1){
 						this.isLogin = true
-						this.userlogined = { username, password }
+						this.userlogined = { username }
 						this.$store.commit('updateisLogin',this.isLogin);
 						this.$store.commit('updateuserlogined',this.userlogined)
 						localStorage.setItem('isLogin',window.JSON.stringify(this.isLogin))

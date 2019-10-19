@@ -46,7 +46,7 @@ export default {
 	},
 	created(){ 
 		this.item = this.paritem
-		if(this.$route.fullPath=='/mycart') {
+		if(this.$route.fullPath.indexOf('mycart')!=-1) {
 			this.title = '购物车',
 			this.color = '#fff',
 			this.textcolor= '#000'

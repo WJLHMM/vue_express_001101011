@@ -1,8 +1,6 @@
 
 <template>
-<div 
-	class="muibarfixedcontainer">
-		border-bottom: 1px solid #888;
+<div class="muibarfixedcontainer">
 	<nav class="mui-bar mui-bar-tab" >
 		<router-link to='/home'class="mui-tab-item mui-active" >
 			<span class="mui-icon mui-icon-home"></span>
@@ -14,15 +12,18 @@
 			<span class="mui-tab-label">分类</span>
 		</router-link>
 
-		<router-link to='/mycart'class="mui-tab-item" >
+		<router-link 
+			:to= "footer_isLogin ? '/mycart?usernam='+ username.username :'/login'"
+			class="mui-tab-item" 
+		>
 			<i class="iconfont cart-iconfont">&#xe618;<span class="mui-badge cart-badge">{{cartlistlengthfromvuex}}</span></i>
 			<span class="mui-tab-label cart-text">购物车</span>
 		</router-link>
 
 		<router-link :to="!footer_isLogin?'/login':'/myinfo'"class="mui-tab-item" >
 			<span class="mui-icon mui-icon-contact"></span>
-			<span class="mui-tab-label">我的</span>
-		</router-link>
+			<span class="mui-tab-label" v-text="footer_isLogin?'我的':'登录'"></span>
+		</router-link>	
 	</nav>
 </div>
 </template>
@@ -32,13 +33,14 @@
 export default {
 	data(){
 		return {
+			username:''
 		}
 	},
 	methods: {
 		
 	},
 	created(){
-
+		this.username = JSON.parse(localStorage.getItem('userlogined'))||{}
 	},
     computed: {
         footer_isLogin:{
@@ -59,6 +61,7 @@ export default {
     },
     updated(){
     	localStorage.setItem('cartlistlengthfromvuex',window.JSON.stringify(this.cartlistlengthfromvuex))
+    	
     },
 
     props:['']

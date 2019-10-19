@@ -49,7 +49,7 @@ app.use(session({
     saveUninitialized:true,// 是否自动保存未初始化的会话，建议true
     resave:true,// 是否每次都重新保存会话，建议false
     cookie:{
-        httpOnly: true,//浏览器不允许脚本操作 document.cookie 去更改 cookie。设置为true可以避免被 xss 攻击拿到 cookie
+        // httpOnly: true,//浏览器不允许脚本操作 document.cookie 去更改 cookie。设置为true可以避免被 xss 攻击拿到 cookie
         maxAge:60*1000*10,
     },
     store: new RedisStore({client})

@@ -39,7 +39,7 @@ export default {
 	},
 	methods: {
 		getshopcartlist() {
-				this.$http.get('cartinfo').then(res=> {
+			this.$http.get('cartinfo').then(res=> {
 				if(res.body.success) {
 					this.selfselllist=[...res.body.data.cartproinfo.selfsell]
 					// this.unitedselllist=[...res.body.data.cartproinfo.united]
@@ -84,6 +84,7 @@ export default {
 		// if(this.$route.fullPath=='/mycart') {
 		// 	this.title = '购物车'
 		// }
+		
 		this.getshopcartlist()
 	},
     computed: {

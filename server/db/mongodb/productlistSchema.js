@@ -33,22 +33,22 @@ const ProductsListSchema = {
         type:Number,
         default:0
     },
-    "appraisevolume":{
+    "appraisenum":{
         type:Number,
         default:0
     },  
-    "neutralappraisevolume":{
+    "neutralappraisenum":{
         type:Number,
         default:0
     }, 
-    "badappraisevolume":{
+    "badappraisenum":{
         type:Number,
         default:0
     },
     "goodappraiseratio": {
         type:Number,
         default:0
-    },
+    },   
     "proseller":{
         type:String,
         default:''
@@ -104,12 +104,19 @@ const ProductsListSchema = {
     "viewimgurl": {
         type:String,
         default:''
+    },
+    "goodappraisenum": { 
+        type:Number, default:0
+    },
+    "momentsnum": { 
+        type:Number, default:0
     }
    
 }
 
-const ProductsListModel = mongoose.model('productlistdbadd',new mongoose.Schema(ProductsListSchema,{timestamps:{createdAt: 'created',updatedAt: 'updated'}}))
 
+
+const ProductsListModel = mongoose.model('productlistdbadd',new mongoose.Schema(ProductsListSchema,{timestamps:{createdAt: 'created',updatedAt: 'updated'}}))
 
 const ProductsListAdd = (dataObj={})=> {
     return new Promise((resolve,reject)=> {

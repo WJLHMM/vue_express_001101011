@@ -1,0 +1,4 @@
+[31merror[39m:2019-10-18 10:38:58[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+[31merror[39m:2019-10-18 10:39:01[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-18 10:39:03[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-18 10:39:05[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379

@@ -35,7 +35,13 @@
 <script>
 
 export default {
-	props:['parselleritem']
+	data() {
+		return {
+		}
+	},
+	props:['parselleritem'],
+	created() {
+	}
 
 }
 

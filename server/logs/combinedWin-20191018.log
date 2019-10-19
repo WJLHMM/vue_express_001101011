@@ -1,0 +1,39 @@
+[32minfo[39m:2019-10-18 08:42:39[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-18 08:42:43[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-18 08:45:19[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
+[32minfo[39m:2019-10-18 08:51:40[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 08:55:01[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 08:55:02[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 09:06:40[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 09:38:20[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-18 09:38:22[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-18 09:53:01[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-18 09:53:03[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-18 09:59:08[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-18 09:59:10[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-18 10:10:16[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-18 10:10:18[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-18 10:18:42[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:20:00[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:20:40[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:21:12[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:24:01[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:24:13[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:24:23[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:24:26[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:24:33[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:24:38[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:26:01[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-18 10:26:03[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-18 10:26:29[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:26:32[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:26:35[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:26:39[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:26:45[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:27:09[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:27:15[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-18 10:36:48[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-18 10:38:58[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+[31merror[39m:2019-10-18 10:39:01[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-18 10:39:03[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-18 10:39:05[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379

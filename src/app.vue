@@ -41,7 +41,7 @@
 		},
 		computed: {//this.$route.path
 			isFooterShow() {
-				if(this.$route.fullPath==='/mycart'||this.$route.fullPath==='/login'||this.$route.fullPath.indexOf('productdetail')!=-1) {
+				if(this.$route.fullPath.indexOf('mycart')!=-1||this.$route.fullPath==='/login'||this.$route.fullPath.indexOf('productdetail')!=-1) {
 					return isFooterShow=false
 				}else {
 					return isFooterShow=true

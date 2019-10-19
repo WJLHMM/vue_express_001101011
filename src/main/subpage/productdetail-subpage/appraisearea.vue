@@ -3,20 +3,20 @@
 	<div class="appraisetitle">
 		<p class="left">
 			<span class="appraisename">评价</span>
-			<span class="goodappaise">好评 {{parappraiseinfoitem.goodappraiseratio}}</span>
+			<span class="goodappaise">好评 {{parappraiseinfoitem1.goodappraiseratio}}</span>
 		</p>
 		<p class="right">
-			<span class="totalappaise">共 {{parappraiseinfoitem.goodappraisenum}}万+ 条</span>
+			<span class="totalappaise">共 {{parappraiseinfoitem1.goodappraisenum}}万+ 条</span>
 			<span class="mui-icon mui-icon-arrowright"></span>
 		</p>
 	</div>
 	<ul class="appraiseareagrade">
-		<li class="goodappaise">好评（{{parappraiseinfoitem.goodappraisenum}}万+）</li>
-		<li class="middleappaise">中评（{{parappraiseinfoitem.neuappraisenum}}+）</li>
-		<li class="badappaise">差评（{{parappraiseinfoitem.badappraisenum}}+）</li>
-		<li class="group">有圈({{parappraiseinfoitem.momentsnum}}万+)</li>
+		<li class="goodappaise">好评（{{parappraiseinfoitem1.goodappraisenum}}万+）</li>
+		<li class="middleappaise">中评（{{parappraiseinfoitem1.neuappraisenum}}+）</li>
+		<li class="badappaise">差评（{{parappraiseinfoitem1.badappraisenum}}+）</li>
+		<li class="group">有圈({{parappraiseinfoitem1.momentsnum}}万+)</li>
 	</ul>
-	<div class="appraisearea" v-for="item in parappraiseinfoitem.commentinfo">
+	<div class="appraisearea" v-for="item in parappraiseinfoitem">
 		<div class="userinfo">
 			<p class="username">
 				<span >{{item.nickname|usernameomit}}</span>
@@ -51,12 +51,11 @@ export default {
 		return {
 		}
 	},
-	props:['parappraiseinfoitem'],
+	props:['parappraiseinfoitem','parappraiseinfoitem1'],
 	methods: {
 
 	},
 	created(){
-		// console.log(this.parappraiseinfoitem)
 	}
 
 }
