@@ -9,7 +9,7 @@ const { loggerWin } = require('../utils/expressWinston.js')
 } = require('../db/mongodb/productlistSchema.js')
 
 router.post('/api/productdetaillist',async (req, res, next)=> {
-    console.log(req.body)
+    // console.log(req.body)
     let { proname } = req.body
     let data = await ProductsListaggfind({"proname":proname}).catch(err=> {
         loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)

@@ -11,13 +11,20 @@ client = redis.createClient(
     //{connect_timeout:1}
 );
 
-client.info((err,response)=>{
+// client.info((err,response)=>{
+//     if(err) {
+//     	 loggerWin.error(`${err}`)
+//     }
+//     loggerWin.info (`redis connect ${REDIS_CONF.port},${REDIS_CONF.host}`)
+//     // console.log(``);
+// });
+client.on("connect",(err,response)=>{
     if(err) {
-    	 loggerWin.error(`${err}`)
+         loggerWin.error(`${err}`)
     }
     loggerWin.info (`redis connect ${REDIS_CONF.port},${REDIS_CONF.host}`)
-    // console.log(``);
-});
+   
+})
 
 client.on("error", (err)=> {
     loggerWin.error(`${err}`)

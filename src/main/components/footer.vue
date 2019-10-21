@@ -13,7 +13,7 @@
 		</router-link>
 
 		<router-link 
-			:to= "footer_isLogin ? '/mycart?usernam='+ username.username :'/login'"
+			:to= "footer_isLogin ? '/mycart?username='+ userlogined :'/login'"
 			class="mui-tab-item" 
 		>
 			<i class="iconfont cart-iconfont">&#xe618;<span class="mui-badge cart-badge">{{cartlistlengthfromvuex}}</span></i>
@@ -37,10 +37,29 @@ export default {
 		}
 	},
 	methods: {
-		
+		checkisLogined(footer_isLogin) {
+			if(footer_isLogin){
+				this.$router.push({
+					path:'/mycart',
+					query: this.userloginedfromvuex
+				}) 
+					
+			}else{
+				mui.toast(
+					`${请您先登录}`,
+					{ duration:900, type:'div' }
+				)
+				setTimeout(()=> {	
+					this.$router.push({
+						path:'/login'
+					}) 
+				},1000)
+			}
+
+		}
 	},
 	created(){
-		this.username = JSON.parse(localStorage.getItem('userlogined'))||{}
+		
 	},
     computed: {
         footer_isLogin:{
@@ -57,7 +76,16 @@ export default {
         	set() {
         		
         	}
-        }
+        }, 
+        userlogined:{
+        	get(){
+    			return this.$store.state.storeuserlogined||JSON.parse(localStorage.getItem('userlogined'))||'0';
+        	},
+        	set() {
+        		
+        	}
+        },
+
     },
     updated(){
     	localStorage.setItem('cartlistlengthfromvuex',window.JSON.stringify(this.cartlistlengthfromvuex))

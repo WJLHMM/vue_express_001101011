@@ -152,24 +152,31 @@ export default {
 			this.isQuitshow = !this.isQuitshow
 		},
 		quitlogin() {
-			this.isLoginininmyinfo = false
-			this.isQuitshow = true
-			this.userloginedinmyinfo={},
-			this.myinfo={}
-			this.$store.commit('updateisLogin',this.isLoginininmyinfo)
-			localStorage.setItem('isLogin',window.JSON.stringify(this.isLoginininmyinfo))
-			localStorage.removeItem('userlogined')
-			mui.toast(
-				`您已经退出登录`,
-				{ duration:900, type:'div' }
-			)
+	
+			this.$http.post("loginout")
+				.then((res)=> {
+					if(res.body.statuscode==1){
+						this.isLoginininmyinfo = false
+						this.isQuitshow = true
+						this.userloginedinmyinfo={},
+						this.myinfo={}
+						this.$store.commit('updateisLogin',this.isLoginininmyinfo)
+						localStorage.setItem('isLogin',window.JSON.stringify(this.isLoginininmyinfo))
+						localStorage.removeItem('userlogined')
+						mui.toast(
+							`${res.body.msg}`,
+							{ duration:900, type:'div' }
+						)
 
-			setTimeout(()=> {	
-				// 注意这里路由跳转放在方法里面，如果直接使用router-link，islogin的值无法传给vu】】【【【}ex
-				this.$router.push({
-					path:'/login',
-				}) 
-			},1000)
+						setTimeout(()=> {	
+							// 注意这里路由跳转放在方法里面，如果直接使用router-link，islogin的值无法传给vu】】【【【}ex
+							this.$router.push({
+								path:'/login',
+							}) 
+						},1000)
+
+					}
+			})
 		},
 		getmyinfo(){
 			this.$http.get('myinfo').then(res=>{
@@ -178,7 +185,7 @@ export default {
 					return item.username == this.userloginedinmyinfo.username
 				})
 				this.myinfo = m[0]
-				console.log(i++)
+				// console.log(i++)
 				
 			})
 		},
@@ -187,7 +194,7 @@ export default {
 		},
 
 		geteditpageinfo(showinfo) {
-			let i=0
+			// let i=0
 			this.isEditPageshow = showinfo
 			// 刷新太厉害 不用
 			// location.reload()

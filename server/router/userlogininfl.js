@@ -4,7 +4,7 @@ const redis = require('redis')
 
 //引入添加数据方法
 const { UserlogininFind } = require('../db/mongodb/userlogininflSchema.js')
-const { RedisGetdata } = require('../db/redis/redisoperation.js')
+// const { RedisGetdata } = require('../db/redis/redisoperation.js')
 const { genPassword } = require('../utils/crypto.js')
 const { userLoginPost } = require('../utils/validate.js')
 const { loggerWin } = require('../utils/expressWinston.js')
@@ -36,8 +36,10 @@ router.post('/api/userlogininfl', (req, res, next)=> {
                item.username===keyObj.username&&item.password===keyObj.password
             )
             if(m) {
-                client.set("username",username, redis.print)
-                req.session.name = await RedisGetdata('username') 
+                
+                req.session.username =username
+                req.session.isLogin = true
+                
                 loggerWin.info(`${req.session.username}登录成功 -- ${req.method} -- ${req.url} -- ${req.headers['user-agent']}`)
                 return res.send({'statuscode':1,'msg':"登录成功"})
             }else {

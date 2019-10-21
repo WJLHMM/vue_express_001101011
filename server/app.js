@@ -17,6 +17,7 @@ global.client = client
 
 const indexRouter = require('./router/index.js')
 const userlogininflRouter = require('./router/userlogininfl.js')
+const loginoutRouter = require('./router/loginout.js')
 const searchbycatagrortyRouter = require('./router/searchbycatagrorty.js')
 const mjdindexRouter = require('./router/mjdindex.js')
 const cartinfoRouter = require('./router/cartinfo.js')
@@ -46,10 +47,10 @@ app.use(cookieParser(''))
 
 app.use(session({
     secret:'vueExpress001',// 用来对session id相关的cookie进行签名
-    saveUninitialized:true,// 是否自动保存未初始化的会话，建议true
+    saveUninitialized:true,// 是否自动保存未初始化的会话，建议trues
     resave:true,// 是否每次都重新保存会话，建议false
     cookie:{
-        // httpOnly: true,//浏览器不允许脚本操作 document.cookie 去更改 cookie。设置为true可以避免被 xss 攻击拿到 cookie
+        // httpOnly: false,//浏览器不允许脚本操作 document.cookie 去更改 cookie。设置为true可以避免被 xss 攻击拿到 cookie
         maxAge:60*1000*10,
     },
     store: new RedisStore({client})
@@ -69,6 +70,7 @@ app.all('*', (req, res, next) => {
 
 app.use('/',indexRouter)
 app.use('/',userlogininflRouter)
+app.use('/',loginoutRouter)
 app.use('/',searchbycatagrortyRouter)
 app.use('/',mjdindexRouter)
 app.use('/',cartinfoRouter)

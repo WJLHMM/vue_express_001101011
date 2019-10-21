@@ -7,11 +7,8 @@ const { loggerWin } = require('../utils/expressWinston.js')
 
 router.post('/api/editmyinfo', async (req, res, next)=> {
     let { username,nickname } = req.body 
-
-    req.session.username = await RedisGetdata('username')
-    // console.log('bbb',req.session.username)
     
-    if(username = req.session.username) {
+    if(username == req.session.username&&req.session.isLogin) {
         UserinfoFind({"username":username})
         .then(data=> {
             let currentdata = { "nickname":data[0].nickname }

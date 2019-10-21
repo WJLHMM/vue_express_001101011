@@ -10,7 +10,10 @@
 				<span class="mui-icon mui-icon-home-filled"></span>
 				<span>进店</span>
 			</div>
-			<router-link to='/mycart' class="cart" tag="div">
+			<router-link 
+				:to= "footer_isLogin ? '/mycart?username='+ userlogined :'/login'" 
+				class="cart" tag="div" 
+			>
 				<span class="mui-icon-extra mui-icon-extra-cart"></span>
 				<span class="mui-badge mui-badge-danger" ref="cartbadge">{{cartlistlength}}</span>
 				<span>购物车</span>
@@ -50,6 +53,10 @@ export default {
 	methods: {
 		addcart(parproname) {
 			// 注意carlist获取本地存储的位置，该数组的作用是记录购物车中的关键词
+			this.$http.post('cartinfo',{parproname}).then(res=> {
+				console.log(res)
+
+			})
 			this.cartlist = JSON.parse(localStorage.getItem('cartlist')||'[]');
 			if(!this.cartlist.includes(parproname)){
 				this.cartlist.unshift(parproname);
@@ -114,7 +121,23 @@ export default {
 		this.cartlistlength = JSON.parse(localStorage.getItem('cartlistlength'))||'0';
 	},
 	props:['parproname'],
-	
+	computed: {
+        footer_isLogin:{
+        	get(){
+        		// console.log(this.$store.state.storeisLogin||JSON.parse(localStorage.getItem('isLogin')),'footer')
+            	return this.$store.state.storeisLogin||JSON.parse(localStorage.getItem('isLogin'));
+        	},
+        	set(){}
+        }, 
+        userlogined:{
+        	get(){
+    			return this.$store.state.storeuserlogined||JSON.parse(localStorage.getItem('userlogined'))||'0';
+        	},
+        	set() {
+        		
+        	}
+        }
+    },
 	watch: {
 		'cartlistlength':function(newValue,oldValue) {
 			// setTimeout(()=>{

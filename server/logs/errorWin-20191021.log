@@ -1,0 +1,14 @@
+[31merror[39m:2019-10-21 09:15:43[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+[31merror[39m:2019-10-21 09:15:45[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-21 09:15:48[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-21 09:52:13[right meow!]  ReplyError: ERR wrong number of arguments for 'hset' command
+[31merror[39m:2019-10-21 10:04:12[right meow!]  ReplyError: ERR wrong number of arguments for 'hset' command
+[31merror[39m:2019-10-21 10:06:10[right meow!]  ReplyError: ERR wrong number of arguments for 'hset' command
+[31merror[39m:2019-10-21 10:06:10[right meow!]  ReplyError: ERR wrong number of arguments for 'hset' command
+[31merror[39m:2019-10-21 10:09:14[right meow!]  ReplyError: ERR wrong number of arguments for 'hset' command
+[31merror[39m:2019-10-21 10:12:22[right meow!]  ReplyError: ERR wrong number of arguments for 'hset' command
+[31merror[39m:2019-10-21 10:14:41[right meow!]  ReplyError: ERR wrong number of arguments for 'hset' command
+[31merror[39m:2019-10-21 10:28:45[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+[31merror[39m:2019-10-21 10:28:48[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-21 19:47:19[right meow!]  ValidationError: nickname: Path `nickname` (``) is shorter than the minimum allowed length (1). -- POST -- /api/editmyinfo -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-21 20:10:32[right meow!]  null -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
