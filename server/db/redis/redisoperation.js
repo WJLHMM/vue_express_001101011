@@ -1,7 +1,19 @@
 const redis = require('redis')
 
 
-let RedisGetdata =(key) => {
+let RedisGetKeys = (key='*') => {
+    return new Promise((resolve,reject)=> {
+        client.keys(key,(err, keys) =>{
+            if(err) {
+                reject(err)
+                return
+            }
+            resolve(keys)
+            return
+        })
+    })
+}
+let RedisGetdata =(key='') => {
     return new Promise((resolve,reject)=> {
         client.get(key,(err,res)=> {
             if(err) {
@@ -27,5 +39,6 @@ let RedisGetdata =(key) => {
 
 module.exports = {
     RedisGetdata,
+    RedisGetKeys
     // RedisGetHashdata
 }

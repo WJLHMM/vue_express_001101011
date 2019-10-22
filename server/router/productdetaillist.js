@@ -19,7 +19,7 @@ router.post('/api/productdetaillist',async (req, res, next)=> {
         "success":true,
         "data":[]
    }
-   console.log(data)
+   // console.log(data)
    ResData.data = [...data]
 
    res.send(ResData)

@@ -139,15 +139,43 @@ const { loggerWin } = require('../utils/expressWinston.js')
        ProductsListAdd,
        ProductsListAddMany,
        ProductsListFind,
-       ProductsListaggfind
+       ProductsListaggfind,
+       ProductsListUpdate
     } = require('../db/mongodb/productlistSchema.js')
 
     router.post('/api/productlistdbadd',async (req, res, next)=> {
-        console.log(req.body)
-        ProductsListAddMany(req.body).catch(err=> {
-            loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
-            res.send(`${err.stack}`)
+        req.body.forEach(item=>{
+            console.log(item.proname)
+            console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++')
+            ProductsListFind({"proname":item.proname}).then(data => {
+                // console.log(data[0].cartimgurl1)
+                // let newproselectiontext = {"proselectiontext":item.proselectiontext}
+                // let oldproselectiontext = {"proselectiontext":data[0].proselectiontext}
+                let newproselectiontext = {"cartimgurl1":item.imgUrl}
+                let oldproselectiontext = {"cartimgurl1":data[0].cartimgurl1} 
+                // let newproselectiontext = {"sevice":item.sevice}
+                // let oldproselectiontext = {"sevice":data[0].sevice}
+                // let newproselectiontext = {"promotionpackagecontent":item.promotionpackagecontent}
+                // let oldproselectiontext = {"promotionpackagecontent":data[0].promotionpackagecontent}
+                // let newproselectiontext = {"currency":item.currency}
+                // let oldproselectiontext = {"currency":data[0].currency}
+                // let newproselectiontext = {"selltype":item.selltype}
+                // let oldproselectiontext = {"selltype":data[0].selltype}
+                // let newproselectiontext = {"payinfo":item.payinfo}
+                // let oldproselectiontext = {"payinfo":data[0].payinfo}
+                console.log('o',oldproselectiontext,'n',newproselectiontext)
+                ProductsListUpdate(oldproselectiontext,newproselectiontext)
+
+
+
+            })
+
+
         })
+        // ProductsListAddMany(req.body).catch(err=> {
+        //     loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+        //     res.send(`${err.stack}`)
+        // })
         
         res.send({'statuscode':1,'msg':'您已经成功添加信息'})
     })

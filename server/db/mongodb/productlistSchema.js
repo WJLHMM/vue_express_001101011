@@ -91,7 +91,7 @@ const ProductsListSchema = {
     },    
     "isselfselling": {
         type:String,
-        default:'是'
+        default:''
     },    
     "easebuy": {
         type:String,
@@ -110,7 +110,31 @@ const ProductsListSchema = {
     },
     "momentsnum": { 
         type:Number, default:0
-    }
+    },
+    "proselectiontext":{
+        type:String,
+        default:''
+    },
+    "sevice": {
+        type:String,
+        default:''
+    },
+    "payinfo":{
+        type:String,
+        default:''
+    },
+    "currency":{
+        type:String,
+        default:'￥'
+    },
+    "selltype": {
+        type:String,
+        default:'self'
+    },
+    "cartimgurl1": {
+        type:String,
+        default:''
+    },
    
 }
 
@@ -176,9 +200,18 @@ const ProductsListaggfind = (keyObj={}) => {
 
 }
 
+const ProductsListUpdate = (currentdata,updateddata)=> {
+    return new Promise((resolve,reject)=> {
+       ProductsListModel.updateOne(currentdata, updateddata,{ runValidators: true }, (err, docs)=>{
+            if (err) reject(err)
+            resolve(docs) 
+        })
+    })
+}
 module.exports = {
    ProductsListAdd,
    ProductsListAddMany,
    ProductsListFind,
-   ProductsListaggfind
+   ProductsListaggfind,
+   ProductsListUpdate
 }

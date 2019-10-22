@@ -40,6 +40,7 @@ export default {
 	methods: {
 		getshopcartlist() {
 			this.$http.get('cartinfo').then(res=> {
+				// console.log(res)
 				if(res.body.success) {
 					this.selfselllist=[...res.body.data.cartproinfo.selfsell]
 					// this.unitedselllist=[...res.body.data.cartproinfo.united]

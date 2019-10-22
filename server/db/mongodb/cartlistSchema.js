@@ -7,15 +7,34 @@ const CartListSchema = {
         type:Number,
         trim: true,
         require:true,
-        default:0
+        default:1
     },
     "username":{
         type:String,
         trim: true,
-        require:true,
-        unique:true,
+        require:true
     },
     "proname": {
+        type:String,
+        default:''
+    },
+    "productbreif":{
+        type:String,
+        default:''
+    },
+    "cartimgurl1": {
+        type:String,
+        default:''
+    },
+    "goodsinfo":{
+        type:String,
+        default:''
+    },
+    "price": {
+        type:Number,
+        default:0
+    },
+    "proseller":{
         type:String,
         default:''
     }
@@ -23,7 +42,7 @@ const CartListSchema = {
 
 
 
-const CartListModel = mongoose.model('carlist',new mongoose.Schema(ProductsListSchema,{timestamps:{createdAt: 'created',updatedAt: 'updated'}}))
+const CartListModel = mongoose.model('carlist',new mongoose.Schema(CartListSchema,{timestamps:{createdAt: 'created',updatedAt: 'updated'}}))
 
 const CartListAdd = (dataObj={})=> {
     return new Promise((resolve,reject)=> {

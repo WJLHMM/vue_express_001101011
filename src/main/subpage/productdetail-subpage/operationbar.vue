@@ -53,8 +53,9 @@ export default {
 	methods: {
 		addcart(parproname) {
 			// 注意carlist获取本地存储的位置，该数组的作用是记录购物车中的关键词
-			this.$http.post('cartinfo',{parproname}).then(res=> {
-				console.log(res)
+			console.log(parproname)
+			this.$http.post('cartinfodbadd',{'proname':parproname}).then(res=> {
+				console.log(res.body.msg)
 
 			})
 			this.cartlist = JSON.parse(localStorage.getItem('cartlist')||'[]');

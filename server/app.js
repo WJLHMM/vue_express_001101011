@@ -21,6 +21,7 @@ const loginoutRouter = require('./router/loginout.js')
 const searchbycatagrortyRouter = require('./router/searchbycatagrorty.js')
 const mjdindexRouter = require('./router/mjdindex.js')
 const cartinfoRouter = require('./router/cartinfo.js')
+const cartinfodbaddRouter = require('./router/cartinfodbadd.js')
 const userinfoRouter = require('./router/userinfo.js')
 const editmyinfoRouter = require('./router/editmyinfo.js')
 const myinfoRouter = require('./router/myinfo.js')
@@ -51,7 +52,7 @@ app.use(session({
     resave:true,// 是否每次都重新保存会话，建议false
     cookie:{
         // httpOnly: false,//浏览器不允许脚本操作 document.cookie 去更改 cookie。设置为true可以避免被 xss 攻击拿到 cookie
-        maxAge:60*1000*10,
+        maxAge:60*1000*60*24*30,
     },
     store: new RedisStore({client})
 }));
@@ -74,6 +75,7 @@ app.use('/',loginoutRouter)
 app.use('/',searchbycatagrortyRouter)
 app.use('/',mjdindexRouter)
 app.use('/',cartinfoRouter)
+app.use('/',cartinfodbaddRouter)
 app.use('/',userinfoRouter)
 app.use('/',myinfoRouter)
 app.use('/',editmyinfoRouter)
