@@ -1,0 +1,11 @@
+[31merror[39m:2019-10-23 09:14:25[right meow!]  Error: Can't set headers after they are sent.--POST--/api/cartinfodbadd--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-23 11:02:54[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+[31merror[39m:2019-10-23 11:02:56[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:02:59[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:01[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:04[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:08[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:13[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:19[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:30[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 15:45:36[right meow!]  您的账号或者密码不正确 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1

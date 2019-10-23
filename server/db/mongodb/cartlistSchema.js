@@ -34,10 +34,38 @@ const CartListSchema = {
         type:Number,
         default:0
     },
+    "number": {
+        type:Number,
+        default:0
+    },
     "proseller":{
         type:String,
         default:''
-    }
+    },
+    "selltype": {
+        type:String,
+        default:'self'
+    },
+    "sevice": {
+        type:String,
+        default:''
+    },
+    "promotionpackagecontent": {
+        type:String,
+        default:''
+    },
+    "payinfo":{
+        type:String,
+        default:''
+    },
+    "currency":{
+        type:String,
+        default:'￥'
+    },
+    "proselectiontext":{
+        type:String,
+        default:''
+    },
 }
 
 

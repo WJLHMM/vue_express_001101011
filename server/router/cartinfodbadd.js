@@ -28,7 +28,7 @@ router.post('/api/cartinfodbadd',async (req, res, next)=> {
      })
 
     if(checkdata.length!=0) {
-        res.send({'statuscode':0,'msg':'您产品已经添加到购物车中'})
+        res.send({'statuscode':0,'msg':'您产品已经在购物车中了，请添加别的产品'})
         return
     }else {
 
@@ -40,17 +40,20 @@ router.post('/api/cartinfodbadd',async (req, res, next)=> {
         let dataObj = {}
         dataObj.username = username
 
-        let { proname,cartimgurl1,goodsinfo,productbreif,price,proseller } = m[0]
+        let { proname,cartimgurl1,goodsinfo,
+            productbreif,price,proseller,proselectiontext,payinfo,currency,sevice,promotionpackagecontent } = m[0]
         
-        Object.assign(dataObj,{ proname,cartimgurl1,goodsinfo,productbreif,price,proseller })
-        console.log(dataObj)
-        CartListAdd(dataObj)
-            // .then(data=> {
-            //   res.send({'statuscode':1,'msg':'您已经成功将将产品添加到购物车中'})
-            // })
-            .catch(err=> {
+        Object.assign(dataObj,{ proname,cartimgurl1,goodsinfo,
+            productbreif,price,proseller,proselectiontext,payinfo,currency,sevice,promotionpackagecontent })
+        // console.log(dataObj)
+        CartListAdd(dataObj).catch(err=> {
             loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+            return res.send({'statuscode':0,'msg':`${err.stack}`})
         })
+            
+        return res.send({'statuscode':1,'msg':'您已经成功将产品添加到购物车中'})
+            
+            
     }
 
     

@@ -1,0 +1,394 @@
+[32minfo[39m:2019-10-23 09:03:07[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:03:10[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:05:04[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
+[32minfo[39m:2019-10-23 09:09:24[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:09:26[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:09:40[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:09:45[right meow!]  POST--/api/cartinfodbadd--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:10:54[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:10:56[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:10:57[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:11:29[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:11:34[right meow!]  aaaaaa已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:11:45[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:11:51[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:11:52[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:11:56[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:11:59[right meow!]  POST--/api/cartinfodbadd--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:12:48[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:12:50[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:14:20[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:14:25[right meow!]  POST--/api/cartinfodbadd--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-23 09:14:25[right meow!]  Error: Can't set headers after they are sent.--POST--/api/cartinfodbadd--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:16:07[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:16:09[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:16:26[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:16:28[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:17:03[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:17:05[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:17:17[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:20:21[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:20:23[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:21:34[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:21:37[right meow!]  bbbbbb已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:21:56[right meow!]  ab_cd20登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:21:59[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:22:00[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:22:07[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:22:41[right meow!]  ab_cd20已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:22:48[right meow!]  aaaaaa登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:25:42[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:25:44[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:29:14[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:29:31[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:29:41[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:29:43[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:29:44[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:30:56[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:30:57[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:30:58[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:31:55[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:32:08[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:32:20[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:32:40[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:32:44[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:32:45[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:32:46[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:32:54[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:33:18[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:33:25[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:34:36[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:36:33[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:36:40[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:36:40[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:37:01[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:37:05[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:37:07[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:37:07[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:39:07[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:39:08[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:40:20[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:40:22[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:40:23[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:40:25[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:40:28[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:40:30[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:40:32[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:42:30[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:42:31[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:42:39[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:42:40[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:44:35[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:44:36[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:44:40[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:45:06[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:45:09[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:45:10[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:45:17[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:45:17[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:45:44[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:47:02[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:47:03[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:47:09[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:47:51[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:47:52[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:50:32[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:50:33[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:50:38[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:50:41[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:50:41[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:56:31[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:56:32[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:56:33[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:56:40[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:56:43[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:57:16[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:57:31[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:59:54[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 09:59:54[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 09:59:56[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 09:59:59[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:00:56[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:01:01[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:01:02[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:01:10[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:01:10[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:01:12[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:01:15[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:01:33[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:01:35[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:01:41[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:03:32[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:04:05[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:04:06[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:04:08[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:04:11[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:04:12[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:04:14[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:06:47[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:06:50[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:06:53[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:06:55[right meow!]  GET--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:06:58[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:08:13[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:08:15[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:08:15[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:08:23[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:09:05[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:09:08[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:09:09[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:09:13[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:09:15[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:12:07[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:12:09[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:12:14[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:13:14[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:13:18[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:13:19[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:13:20[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:13:26[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:13:28[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:15:10[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:15:12[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:15:46[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:15:48[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:15:48[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:16:11[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:16:25[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:16:29[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:17:32[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:19:18[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:19:21[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:19:29[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:19:30[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:19:31[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:21:27[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:21:29[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:25:19[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:25:20[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:30:50[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:34:24[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:36:29[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:45:23[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:45:25[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:47:37[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:47:39[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:48:31[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:48:32[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:48:35[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:48:47[right meow!]  aaaaaa已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:48:56[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:48:59[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:49:18[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:50:58[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:51:34[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:53:29[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:53:30[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:53:40[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:53:54[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:53:56[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 10:54:46[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:54:48[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:55:25[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
+[32minfo[39m:2019-10-23 10:56:23[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:56:25[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 10:58:06[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 10:58:08[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 11:01:51[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 11:01:53[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 11:01:56[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 11:01:58[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-23 11:02:54[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - read ECONNRESET
+[31merror[39m:2019-10-23 11:02:56[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:02:59[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:01[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:04[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:08[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:13[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:19[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[31merror[39m:2019-10-23 11:03:30[right meow!]  Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
+[32minfo[39m:2019-10-23 11:25:41[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 11:25:43[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 11:28:01[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
+[32minfo[39m:2019-10-23 11:55:13[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 11:55:15[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 11:56:46[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 11:58:00[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 11:58:02[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 11:58:02[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 11:58:04[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:00:03[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:03:47[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 12:03:49[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 12:03:53[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:03:59[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:04:16[right meow!]  aaaaaa登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:04:24[right meow!]  aaaaaa已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:04:52[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:05:08[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:06:22[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:06:26[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:07:33[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 12:07:35[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 12:07:42[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:01[right meow!]  bbbbbb已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:04[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:05[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:18[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:19[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:21[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:24[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:35[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 12:08:35[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:37[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 12:08:37[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:41[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:54[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:08:57[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:09:09[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:09:12[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:09:13[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:09:15[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:11:22[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 12:11:24[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:11:24[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 12:11:27[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:11:42[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:11:53[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:11:57[right meow!]  bbbbbb已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:12:07[right meow!]  aaaaaa登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:14:39[right meow!]  aaaaaa已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:14:47[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:14:50[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:14:56[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:04[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:06[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:09[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:13[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:17[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:21[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:22[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:24[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:29[right meow!]  bbbbbb已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:37[right meow!]  aaaaaa登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:15:40[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:16:53[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:16:54[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:16:54[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:16:59[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:17:02[right meow!]  aaaaaa已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:17:10[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:17:14[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:17:40[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:18:34[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 12:18:35[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:18:36[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 12:19:42[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:19:44[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:19:45[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:19:49[right meow!]  bbbbbb已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:19:57[right meow!]  aaaaaa登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:19:59[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:20:01[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:20:03[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:20:04[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:20:07[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:21:13[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:21:14[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:21:15[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:21:24[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:21:28[right meow!]  aaaaaa已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:21:38[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:21:46[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:22:00[right meow!]  bbbbbb已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:22:22[right meow!]  aeuyu_gug07登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:22:26[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:22:28[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:22:29[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:23:12[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:25:15[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 12:25:17[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 12:25:34[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 12:25:36[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:25:36[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 12:25:45[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:25:49[right meow!]  aeuyu_gug07已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:26:22[right meow!]  aaaaaa登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:26:26[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:26:29[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:26:30[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:26:43[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:26:50[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:26:53[right meow!]  aaaaaa已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:27:03[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:27:07[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:27:17[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:27:22[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 12:27:25[right meow!]  bbbbbb已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:15:50[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 14:15:51[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:15:52[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 14:15:58[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:16:03[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:16:13[right meow!]  aaaaaa登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:16:16[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:31:31[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 14:31:33[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 14:34:05[right meow!]  redis connect 6379,127.0.0.1
+[32minfo[39m:2019-10-23 14:34:07[right meow!]  mongodb connect success 27017,localhost
+[32minfo[39m:2019-10-23 14:36:16[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:36:19[right meow!]  aaaaaa已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:36:22[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:36:24[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:36:26[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:36:28[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:36:30[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:37:32[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:37:33[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:37:35[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:37:37[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:37:56[right meow!]  aaaaaa登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:38:02[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:38:12[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:41:41[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 14:46:51[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:02:29[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:02:46[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:18:40[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:20:12[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:38:10[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:39:21[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:43:17[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:43:21[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:45:15[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:45:19[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:45:21[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[31merror[39m:2019-10-23 15:45:36[right meow!]  您的账号或者密码不正确 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:45:39[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:45:43[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:45:45[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:45:49[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:45:51[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:45:53[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:46:00[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:46:03[right meow!]  bbbbbb已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:46:18[right meow!]  bbbbbb登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:46:21[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:46:31[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:46:33[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:46:36[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:48:44[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:48:47[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:48:51[right meow!]  bbbbbb已经成功退出登录 -- POST -- /api/loginout -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:49:02[right meow!]  aaaaaa登录成功 -- POST -- /api/userlogininfl -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:49:06[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:49:06[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:49:07[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:49:17[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:49:18[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:49:32[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:49:41[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:52:11[right meow!]  POST -- /api/searchbycatagrorty -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:52:12[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:52:18[right meow!]  POST--/api/cartinfo--Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[32minfo[39m:2019-10-23 15:52:21[right meow!]  GET -- /api/mjdindex -- Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1

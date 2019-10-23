@@ -41,6 +41,7 @@ var store = new Vuex.Store({
 		},
 		updateuserlogined(state,updateuserloginedfromlogin){
 			state.storeuserlogined = updateuserloginedfromlogin
+			localStorage.setItem('userlogined',window.JSON.stringify(state.storeuserlogined))
 		}
 	},
 	getters:{}

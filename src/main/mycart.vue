@@ -34,34 +34,16 @@ export default {
 			selfselllist:[],
 			unitedselllist:[],
 			cartlistkey:[],
-			cartlist:[]
+			cartlist:[],
+			username:''
 		}
 	},
 	methods: {
 		getshopcartlist() {
-			this.$http.get('cartinfo').then(res=> {
-				// console.log(res)
-				if(res.body.success) {
-					this.selfselllist=[...res.body.data.cartproinfo.selfsell]
-					// this.unitedselllist=[...res.body.data.cartproinfo.united]
-				// 	console.log(this.unitedselllist)
-					this.cartlistkey = JSON.parse(localStorage.getItem('cartlist')||'[]');
-
-					this.selfselllist.filter((item,index)=>{
-						for(let i=0;i<this.cartlistkey.length;i++)
-						{
-							if(item.producmodel == this.cartlistkey[i])
-							{
-								this.cartlist.unshift(item)
-								// console.log(item)
-								return item
-
-							}
-						}
-						return this.selfselllist
-					});
-						// console.log(this.selfselllist)
-						// console.log(this.cartlist)
+			this.$http.post('cartinfo',{"username":this.$route.query.username}).then(res=> {
+				if(res.body) {
+					this.cartlist=[...res.body]
+					// console.log(this.cartlist)
 				}else {
 					Toast({
 						message: '读取数据失败',
@@ -82,10 +64,8 @@ export default {
 		settlementfooter
 	},
 	created(){
-		// if(this.$route.fullPath=='/mycart') {
-		// 	this.title = '购物车'
-		// }
 		
+
 		this.getshopcartlist()
 	},
     computed: {

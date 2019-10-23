@@ -13,7 +13,7 @@
 		</router-link>
 
 		<router-link 
-			:to= "footer_isLogin ? '/mycart?username='+ userlogined :'/login'"
+			:to= "footer_isLogin ? '/mycart?username='+ username :'/login'"
 			class="mui-tab-item" 
 		>
 			<i class="iconfont cart-iconfont">&#xe618;<span class="mui-badge cart-badge">{{cartlistlengthfromvuex}}</span></i>
@@ -33,7 +33,7 @@
 export default {
 	data(){
 		return {
-			username:''
+			// username:JSON.parse(localStorage.getItem('userlogined')).username||' '
 		}
 	},
 	methods: {
@@ -59,7 +59,8 @@ export default {
 		}
 	},
 	created(){
-		
+		// let username = JSON.parse(localStorage.getItem('userlogined'))||''
+		// console.log('use',username)
 	},
     computed: {
         footer_isLogin:{
@@ -77,19 +78,17 @@ export default {
         		
         	}
         }, 
-        userlogined:{
+        username:{
         	get(){
-    			return this.$store.state.storeuserlogined||JSON.parse(localStorage.getItem('userlogined'))||'0';
+    			return this.$store.state.storeuserlogined.username||JSON.parse(localStorage.getItem('userlogined')).username||' ';
         	},
         	set() {
         		
         	}
         },
-
     },
     updated(){
     	localStorage.setItem('cartlistlengthfromvuex',window.JSON.stringify(this.cartlistlengthfromvuex))
-    	
     },
 
     props:['']

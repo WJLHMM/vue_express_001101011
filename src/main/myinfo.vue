@@ -163,6 +163,16 @@ export default {
 						this.$store.commit('updateisLogin',this.isLoginininmyinfo)
 						localStorage.setItem('isLogin',window.JSON.stringify(this.isLoginininmyinfo))
 						localStorage.removeItem('userlogined')
+						localStorage.removeItem('totalsettmentnumfromvuex')
+						localStorage.removeItem('totalsettmentnum')
+						localStorage.removeItem('totalsettmentamountfromvuex')
+						localStorage.removeItem('totalsettmentamount')
+						localStorage.removeItem('pickedlist')
+						localStorage.removeItem('picked')
+						localStorage.removeItem('number')
+						localStorage.removeItem('cartlistlengthfromvuex')
+						localStorage.removeItem('cartlistlength')
+						localStorage.removeItem('cartlist')
 						mui.toast(
 							`${res.body.msg}`,
 							{ duration:900, type:'div' }
@@ -180,13 +190,11 @@ export default {
 		},
 		getmyinfo(){
 			this.$http.get('myinfo').then(res=>{
-				let  i = 0
 				const m = res.body.filter((item)=>{
 					return item.username == this.userloginedinmyinfo.username
 				})
 				this.myinfo = m[0]
-				// console.log(i++)
-				
+				// console.log(this.myinfo)
 			})
 		},
 		editpagtoggle() {
@@ -214,7 +222,7 @@ export default {
 		editmyinfo
 	},
 	created(){
-		this.userloginedinmyinfo.username = this.$route.query.username
+		this.userloginedinmyinfo.username = this.$route.query
 		this.isLoginininmyinfo =JSON.parse(localStorage.getItem('isLogin'))
 		this.userloginedinmyinfo = JSON.parse(localStorage.getItem('userlogined'))
 		this.getmyinfo()
