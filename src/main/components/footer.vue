@@ -16,7 +16,13 @@
 			:to= "footer_isLogin ? '/mycart?username='+ username :'/login'"
 			class="mui-tab-item" 
 		>
-			<i class="iconfont cart-iconfont">&#xe618;<span class="mui-badge cart-badge">{{cartlistlengthfromvuex}}</span></i>
+			<i class="iconfont cart-iconfont">&#xe618;
+				<span 
+					class="mui-badge cart-badge"
+					v-text="footer_isLogin?cartlistlengthfromvuex:0"
+				>
+				</span>
+			</i>
 			<span class="mui-tab-label cart-text">购物车</span>
 		</router-link>
 

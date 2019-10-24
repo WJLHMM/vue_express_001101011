@@ -53,34 +53,33 @@ export default {
 	methods: {
 		addcart(parproname) {
 			// 注意carlist获取本地存储的位置，该数组的作用是记录购物车中的关键词
-			console.log(parproname)
+			// console.log(parproname)
 			this.$http.post('cartinfodbadd',{'proname':parproname}).then(res=> {
 				console.log(res.body.msg)
-
-			})
-			this.cartlist = JSON.parse(localStorage.getItem('cartlist')||'[]');
-			if(!this.cartlist.includes(parproname)){
-				this.cartlist.unshift(parproname);
-				this.isBallshow =!this.isBallshow;
-			}else {
+				if(res.body.statuscode==1) {
+					// this.cartlist = JSON.parse(localStorage.getItem('cartlist')||'[]');
+					// if(!this.cartlist.includes(parproname)){
+						// this.cartlist.unshift(parproname);
+						this.isBallshow =!this.isBallshow;
+					// }else {
+					// }
+					// 注意给operationbar中的徽章数字延迟变化，延迟时间等同于小球抛物线到购物篮的时间。注意由于setTimeout是异步的，相对应的
+					// localstorage $store.commit 均要放在setTimeout中，否则会出现localstorage，vuex数据不能同步更新
+					
+					setTimeout(()=>{
+						this.cartlistlength = this.cartlist.length
+						localStorage.setItem("cartlistlength",window.JSON.stringify(this.cartlistlength))//这里不加window.老报错
+						this.$store.commit('updatecartlistlength',this.cartlistlength)
+					},400)
+					localStorage.setItem("cartlist",window.JSON.stringify(this.cartlist))//这里不加window.老报错
+					this.$store.commit('updatecartlist',this.cartlist)
+				}
 				Toast({
-					message: '该产品已经加入购物车',
+					message: `${res.body.msg}`,
 					position: 'middle',
 					duration: 1000
 				});
-			}
-			
-			// 注意给operationbar中的徽章数字延迟变化，延迟时间等同于小球抛物线到购物篮的时间。注意由于setTimeout是异步的，相对应的
-			// localstorage $store.commit 均要放在setTimeout中，否则会出现localstorage，vuex数据不能同步更新
-			setTimeout(()=>{
-				this.cartlistlength = this.cartlist.length
-				localStorage.setItem("cartlistlength",window.JSON.stringify(this.cartlistlength))//这里不加window.老报错
-				this.$store.commit('updatecartlistlength',this.cartlistlength)
-			},400)
-
-			localStorage.setItem("cartlist",window.JSON.stringify(this.cartlist))//这里不加window.老报错
-			
-			this.$store.commit('updatecartlist',this.cartlist)
+			})
 		},
 		beforeEnter(el){
 			// 获取ball的位置
@@ -154,9 +153,9 @@ export default {
 </script>
 <style>
 /* 全局样式 */
-.mint-toast {
+/* .mint-toast {
   background-color: red !important;
-}
+} */
 </style>
 <style scoped lang='less'>
 .operationfixcontainer {

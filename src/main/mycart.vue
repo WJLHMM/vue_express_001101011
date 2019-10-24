@@ -3,7 +3,7 @@
 	<div class="mycart">
 		<appheader></appheader>
 		<actionsheet></actionsheet>
-		<cart :parcartlist ="cartlist" :parunitedselllist="unitedselllist" ></cart>
+		<cart :parcartlist ="cartlist" :parunitedselllist="unitedselllist" :parstatucode=statucode></cart>
 		<settlementfooter :parlastestcartlist=lastestcartlist></settlementfooter>
   <br><br>
   <br>
@@ -25,8 +25,8 @@ import actionsheet from './subpage/mycart-subpage/actionsheet.vue';
 import settlementfooter from './subpage/mycart-subpage/settlementfooter.vue';
 
 import Vue from 'vue'
-import { Toast } from 'mint-ui';
-Vue.component(Toast.name, Toast);
+// import { Toast } from 'mint-ui';
+// Vue.component(Toast.name, Toast);
 
 export default {
 	data(){
@@ -35,22 +35,30 @@ export default {
 			unitedselllist:[],
 			cartlistkey:[],
 			cartlist:[],
-			username:''
+			username:'',
+			statucode:null
 		}
 	},
 	methods: {
 		getshopcartlist() {
 			this.$http.post('cartinfo',{"username":this.$route.query.username}).then(res=> {
+				
 				if(res.body) {
 					this.cartlist=[...res.body]
 					// console.log(this.cartlist)
-				}else {
-					Toast({
-						message: '读取数据失败',
-						position: 'middle',
-						duration: 3000
-					});
 				}
+				// mui.toast({
+				// 	message: `${res.body.msg}`,
+				// 	position: 'middle',
+				// 	duration: 1000
+				// });
+				if(res.body.statuscode==0){
+					mui.toast(
+						`${res.body.msg}`,
+						{ duration:900, type:'div' }
+					)
+				}
+				
 			}, (e) => {
 				console.log(e)
 			})
@@ -72,7 +80,11 @@ export default {
         lastestcartlist() {
             return this.$store.state.storecartlist
         }
-    }
+    },
+	mounted(){
+		mui('.mui-input-row input').input(); 
+		
+	}
 }
 </script>
 

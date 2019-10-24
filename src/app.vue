@@ -47,16 +47,24 @@
 					return isFooterShow=true
 				}
 				
-			} 
-	        // footer_cartlistlength() {
+			},
+	        // footercartlistlength() {
 	        //     return this.$store.state.storecartlistlength
-	        // }
+	        // },
+	        userlogined:{
+	        	get(){
+	    			return this.$store.state.storeuserlogined||JSON.parse(localStorage.getItem('userlogined'))||'0';
+	        	},
+	        	set() {
+	        		
+	        	}
+	        }
 		},
 		created(){
 			
 		},
 		mounted(){
-			window.addEventListener('scroll', this.handleScroll)
+			window.addEventListener('scroll', this.handleScroll,{ passive: false })
 			mui('body').on('click','a',function(){document.location.href=this.href;});
 			mui('body').on('tap','a',function(){document.location.href=this.href;});
 		},
@@ -70,6 +78,7 @@
 <style lang='less'>
 
 html, body {
+	* { touch-action: pan-y; } 
 	border:0;
 	/* touch-action: manipulation;  */
 	.container {

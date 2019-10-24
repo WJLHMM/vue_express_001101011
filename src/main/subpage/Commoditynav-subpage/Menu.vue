@@ -89,8 +89,8 @@ export default {
 		
 	},
 	updated(){
-		//监听touchmove事件，防止ul 高度大于50，小于-1224
-		window.addEventListener("touchmove", function(e){
+		// 监听touchmove事件，防止ul 高度大于50，小于-1224
+		window.addEventListener("touchmove", e=>{
 			let itemswrapper = document.getElementsByClassName('itemswrapper')
 		    let itemswrappertop = itemswrapper[0].getBoundingClientRect().top 
 
@@ -107,7 +107,7 @@ export default {
 		}, { passive: false });
 	},
 	destroyed(){
-		window.removeEventListener("touch", function(e){
+		window.removeEventListener("touch", e=>{
 		},false);
 	}
 }

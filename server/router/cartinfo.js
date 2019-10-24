@@ -20,7 +20,9 @@ router.post('/api/cartinfo',async (req, res, next)=> {
             loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
             return res.json(`${err.starck}`)
         })
-       res.json(Resdata)
+       res.send(Resdata)
+    }else{
+        res.send({'statuscode':0,'msg':'您已经很久没有登录了，请重新登录进入购物车'})
     }
   
 })

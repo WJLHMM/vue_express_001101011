@@ -121,8 +121,8 @@ export default {
 			number:[],
 			totalsettmentnum:0,
 			totalsettmentamount:0,
-			cartlistfromoperationbar:[]
-			
+			cartlistfromoperationbar:[],
+			picked:true
 		}
 	},
 	methods: {
@@ -133,58 +133,80 @@ export default {
 			// 对于全选  点击checkbox,picked值取反,如果true，将pickedlist全部加满，及所有item.proname全选中
 			// 反之 取消checkbox 将pickedlist清空
 			picked=!picked
+			// console.log(picked)
+			this.$http.post('cartinfodbadd',{'picked':picked,"source":"selectallitem"}).then(res=> {
+				mui.toast(
+					`${res.body.msg}`,
+					{ duration:900, type:'div' }
+			    )
 
-			if(picked){
-				this.parcartlist.forEach((item)=> {
-					if(!this.pickedlist.includes(item.proname)){
-						this.pickedlist.push(item.proname)
-					}
-				});
-				//由于全选，总件数及为各个number的总和
-				this.totalsettmentnum = 0;
-				this.number.forEach((item)=> {
-					this.totalsettmentnum += parseInt(item)
-				});
-				//计算所有价格总数
-				this.totalsettmentamount = 0;
-				for(let i=0;i<this.number.length;i++) {
-					this.totalsettmentamount += this.number[i]*this.parcartlist[i].price
-				}
-			}else{
-				// 对于全选按钮点picked值击取反,如果false，将pickedlist清空，及所有item全不选
-				this.pickedlist=[];
-				this.totalsettmentnum = 0;
-				this.totalsettmentamount = 0
-			}
+			}, (e) => {
+				console.log(e)
+			})
+		
+			// if(picked){
+			// 	this.parcartlist.forEach((item)=> {
+			// 		if(!this.pickedlist.includes(item.proname)){
+			// 			this.pickedlist.push(item.proname)
+			// 		}
+			// 	});
+			// 	//由于全选，总件数及为各个number的总和
+			// 	this.totalsettmentnum = 0;
+			// 	this.number.forEach((item)=> {
+			// 		this.totalsettmentnum += parseInt(item)
+			// 	});
+			// 	//计算所有价格总数
+			// 	this.totalsettmentamount = 0;
+			// 	for(let i=0;i<this.number.length;i++) {
+			// 		this.totalsettmentamount += this.number[i]*this.parcartlist[i].price
+			// 	}
+			// }else{
+			// 	// 对于全选按钮点picked值击取反,如果false，将pickedlist清空，及所有item全不选
+			// 	this.pickedlist=[];
+			// 	this.totalsettmentnum = 0;
+			// 	this.totalsettmentamount = 0
+			// }
 			// 与此同时将picked，picklist全部本地留存
-			localStorage.setItem('picked',window.JSON.stringify(picked))
-			localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
-			localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
-			localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
+			// localStorage.setItem('picked',window.JSON.stringify(picked))
+			// localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
+			// localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
+			// localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
 
-			//发送数据到store
-			this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
-			this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
+			// //发送数据到store
+			// this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
+			// this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
 			
 		},
 		//单选，全选操作，选中的item，进入picklist数组中，落选的从中清除。如果所有都选中，则，全选checklist picked变温true
 		selectitem(itemname,index){
-			// 将html中传入的数据，验证，如果没有在pickedlist数组中，就加入
-			// 由于是v-for内的操作，该方法下获得的数据全部在updated中留存本地
-			if(this.pickedlist.indexOf(itemname)==-1){//判断点击的item是否在pickedlist中，如果不在,及选中该item
-				this.pickedlist.push(itemname);
-				//点击加入的item，相应的总件数需要加上新进的nubmer项
-				this.totalsettmentnum = this.totalsettmentnum+ parseInt(this.number[index]);
-				//点击加入Item，加上对应的金额
-				this.totalsettmentamount = this.totalsettmentamount + parseInt(this.number[index])*parseInt(this.parcartlist[index].price)
-			}else{//判断点击的item是否在pickedlist中，如果在,及不选该item，相应的总件数需要减上新进的nubmer项
-				this.totalsettmentnum = this.totalsettmentnum - parseInt(this.number[index]);
-				this.totalsettmentamount = this.totalsettmentamount - parseInt(this.number[index])*parseInt(this.parcartlist[index].price)
-			}
 
-			// 及时发送数据到store
-			this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
-			this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
+			console.log(this.pickedlist.indexOf(itemname)==-1)
+
+			this.$http.post('cartinfodbadd',{"proname":itemname,"isPicked":this.pickedlist.indexOf(itemname)==-1,"source":"selectitem"}).then(res=> {
+				mui.toast(
+					`${res.body.msg}`,
+					{ duration:900, type:'div' }
+			    )
+
+			}, (e) => {
+				console.log(e)
+			})
+			// // 将html中传入的数据，验证，如果没有在pickedlist数组中，就加入
+			// // 由于是v-for内的操作，该方法下获得的数据全部在updated中留存本地
+			// if(this.pickedlist.indexOf(itemname)==-1){//判断点击的item是否在pickedlist中，如果不在,及选中该item
+			// 	this.pickedlist.push(itemname);
+			// 	//点击加入的item，相应的总件数需要加上新进的nubmer项
+			// 	this.totalsettmentnum = this.totalsettmentnum+ parseInt(this.number[index]);
+			// 	//点击加入Item，加上对应的金额
+			// 	this.totalsettmentamount = this.totalsettmentamount + parseInt(this.number[index])*parseInt(this.parcartlist[index].price)
+			// }else{//判断点击的item是否在pickedlist中，如果在,及不选该item，相应的总件数需要减上新进的nubmer项
+			// 	this.totalsettmentnum = this.totalsettmentnum - parseInt(this.number[index]);
+			// 	this.totalsettmentamount = this.totalsettmentamount - parseInt(this.number[index])*parseInt(this.parcartlist[index].price)
+			// }
+
+			// // 及时发送数据到store
+			// this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
+			// this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
 		},
 		//获取每个numbox的值，发送到指定位置
 		getnumber(itemname,index){
@@ -283,20 +305,20 @@ export default {
 	        return this.$store.state.storescrollTop
 	    },
 	    // 注意picked放在computed中，放在data，在selectitem方法中使用时候，会出现全选后，取消第一个，全选任然存在，第二个开始取消的现象
-	    picked:{
-	    	get() {
-		    	if(this.pickedlist.length===this.parcartlist.length){
-					return true
-				}else{
-					return false
-				}
-	    	},
-	    	set() {
+	   //  picked:{
+	   //  	get() {
+		  //   	if(this.pickedlist.length===this.parcartlist.length){
+				// 	return true
+				// }else{
+				// 	return false
+				// }
+	   //  	},
+	   //  	set() {
 	    		
-	    	}
-	    }
+	   //  	}
+	   //  }
 	},
-	props:['parcartlist','parunitedselllist'],
+	props:['parcartlist','parunitedselllist','parstatucode'],
 	created() {
 		this.picked = JSON.parse(localStorage.getItem('picked'))||true
 		this.pickedlist = JSON.parse(localStorage.getItem('pickedlist'))||[]
@@ -318,13 +340,15 @@ export default {
 		
 		//第二步 将number数组中的值分配到相对应的input value中,注意过分布添加的过程中，会出现，列表数大于number数
 		//的情况，此时直接给number添加缺少数量的1
-		for(let i=0;i<this.$refs.setnumber.length;i++) {
-			if(this.$refs.setnumber.length>this.number.length){
-				for(let k=0;k<(this.$refs.setnumber.length-this.number.length);k++) {
-					this.number.push(parseInt(1))
+		if(this.$refs.setnumber) {
+			for(let i=0;i<this.$refs.setnumber.length;i++) {
+				if(this.$refs.setnumber.length>this.number.length){
+					for(let k=0;k<(this.$refs.setnumber.length-this.number.length);k++) {
+						this.number.push(parseInt(1))
+					}
 				}
+				this.$refs.setnumber[i].value=this.number[i]
 			}
-			this.$refs.setnumber[i].value=this.number[i]
 		}
 		//本地储存number
 		localStorage.setItem('number',window.JSON.stringify(this.number))

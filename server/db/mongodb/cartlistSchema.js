@@ -65,6 +65,10 @@ const CartListSchema = {
     "proselectiontext":{
         type:String,
         default:''
+    }, 
+    "picked":{
+        type:Boolean,
+        default:true
     },
 }
 
@@ -94,7 +98,7 @@ const CartListFind = (keyObj={}) => {
 
 const CartListaggfind = (keyObj={}) => {
     return new Promise((resolve,reject)=> {
-        ProductsListModel.aggregate([
+        CartListModel.aggregate([
             {
                 $match: keyObj
             },
@@ -122,9 +126,27 @@ const CartListaggfind = (keyObj={}) => {
 
 }
 
+const CartListUpdateMany = (currentdata,updateddata)=> {
+    return new Promise((resolve,reject)=> {
+        CartListModel.updateMany(currentdata, updateddata,{ runValidators: true }, (err, docs)=>{
+            if (err) reject(err)
+            resolve(docs) 
+        })
+    })
+}
+
+const CartListUpdateOne = (currentdata,updateddata)=> {
+    return new Promise((resolve,reject)=> {
+        CartListModel.updateOne(currentdata, updateddata,{ runValidators: true }, (err, docs)=>{
+            if (err) reject(err)
+            resolve(docs) 
+        })
+    })
+}
 module.exports = {
     CartListAdd,
     CartListFind,
-    CartListaggfind
-
+    CartListaggfind,
+    CartListUpdateMany,
+    CartListUpdateOne
 }
