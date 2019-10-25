@@ -61,7 +61,7 @@ router.post('/api/cartinfodbadd',async (req, res, next)=> {
             })
                 
         }
-    }else if(req.body.source==="selectallitem"){
+    }else if(req.body.source==="selectallitem"){//全选checkbox 操作数据表 
 
         let picked
         //注意boolean类型的值 前后端传值得到的是string类型，所以先要将传过来的值‘true’变为true，‘false’变为false
@@ -88,7 +88,7 @@ router.post('/api/cartinfodbadd',async (req, res, next)=> {
                 loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
                 res.send({'statuscode':0,'msg':'数据修改失败'})
             })
-    }else if (req.body.source==="selectitem"){
+    }else if (req.body.source==="selectitem"){//单选checkbox  操作数据表
         let picked
         let { proname } = req.body
         //注意boolean类型的值 前后端传值得到的是string类型，所以先要将传过来的值‘true’变为true，‘false’变为false
@@ -119,6 +119,28 @@ router.post('/api/cartinfodbadd',async (req, res, next)=> {
                 res.send({'statuscode':0,'msg':`${proname}选择失败`})
             })
        
+    }else if(req.body.source==="getnumber"){
+        let { proname,number } = req.body
+        CartListFind({"username":username,"proname":proname})
+        .then(data => {
+            let olddata = {"number":data[0].number,"username":username,"proname":proname}
+            let newdata = {"number":parseInt(number),"username":username,"proname":proname}
+            CartListUpdateOne(olddata,newdata)
+            .then(data=> {
+                res.send({'statuscode':1,'msg':`${proname}数量修改为${number}件`})
+                return
+            })
+            .catch(err=> {
+                loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+                res.send({'statuscode':0,'msg':`${proname}数量不能改为${number}件`})
+                return
+            })
+        })
+        .catch(err=> {
+                loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+                res.send({'statuscode':0,'msg':`没有查询到该产品`})
+                return
+        })
     }
 
 

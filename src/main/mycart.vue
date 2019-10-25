@@ -3,7 +3,13 @@
 	<div class="mycart">
 		<appheader></appheader>
 		<actionsheet></actionsheet>
-		<cart :parcartlist ="cartlist" :parunitedselllist="unitedselllist" :parstatucode=statucode></cart>
+		<cart 
+			:parcartlist ="cartlist" 
+			:parunitedselllist="unitedselllist" 
+			:parprepickedlist="prepickedlist"
+			@refresdbdata = "getlatestdbdat"
+		>
+		</cart>
 		<settlementfooter :parlastestcartlist=lastestcartlist></settlementfooter>
   <br><br>
   <br>
@@ -36,7 +42,7 @@ export default {
 			cartlistkey:[],
 			cartlist:[],
 			username:'',
-			statucode:null
+			prepickedlist:[]
 		}
 	},
 	methods: {
@@ -45,9 +51,13 @@ export default {
 				
 				if(res.body) {
 					this.cartlist=[...res.body]
-					// console.log(this.cartlist)
+					this.cartlist.forEach(item=> {
+						if(item.picked){
+							this.prepickedlist.push(item.proname)
+						}
+					})
 				}
-				// mui.toast({
+				// Toast({
 				// 	message: `${res.body.msg}`,
 				// 	position: 'middle',
 				// 	duration: 1000
@@ -63,6 +73,9 @@ export default {
 				console.log(e)
 			})
 		},
+		getlatestdbdat() {
+			this.getshopcartlist()
+		}
 
 	},
 	components: {
@@ -72,8 +85,6 @@ export default {
 		settlementfooter
 	},
 	created(){
-		
-
 		this.getshopcartlist()
 	},
     computed: {
@@ -85,6 +96,7 @@ export default {
 		mui('.mui-input-row input').input(); 
 		
 	}
+
 }
 </script>
 

@@ -57,14 +57,14 @@
 									class="mui-btn mui-btn-numbox-minus" 
 									type="button"
 								>-
-									<!-- @click="gettotalsettmentnumminus(item.proname,index,totalsettmentnum)" -->
+									<!-- @click="gettotalsettmentnumminus(item.proname,index)" -->
 								</button>
 								<input 
 									id="test" 
 									ref="setnumber"
 									class="mui-input-numbox" 
 									type="number" 
-									value="item.numbber"
+									:value="item.number"
 									@change="getnumber(item.proname,index)" 
 								/>
 									<!-- :value="index"  -->
@@ -72,7 +72,7 @@
 									class="mui-btn mui-btn-numbox-plus" 
 									type="button" 
 								>+
-									<!-- @click="gettotalsettmentnumplus(item.proname,index,totalsettmentnum)" -->
+									<!-- @click="gettotalsettmentnumplus(item.proname,index)" -->
 								</button>
 							</div>
 						</div>
@@ -121,8 +121,8 @@ export default {
 			number:[],
 			totalsettmentnum:0,
 			totalsettmentamount:0,
-			cartlistfromoperationbar:[],
-			picked:true
+			cartlistfromoperationbar:[]
+			// picked:true
 		}
 	},
 	methods: {
@@ -135,21 +135,40 @@ export default {
 			picked=!picked
 			// console.log(picked)
 			this.$http.post('cartinfodbadd',{'picked':picked,"source":"selectallitem"}).then(res=> {
-				mui.toast(
-					`${res.body.msg}`,
-					{ duration:900, type:'div' }
-			    )
+				if(res.body.statuscode===1){
+
+					mui.toast(
+						`${res.body.msg}`,
+						{ duration:900, type:'div' }
+				    )
+					if(picked){
+						this.parcartlist.forEach((item)=> {
+							if(!this.pickedlist.includes(item.proname)){
+								this.pickedlist.push(item.proname)
+							}
+							this.totalsettmentnum += parseInt(item.number)
+							this.totalsettmentamount += parseInt(item.number)*parseInt(item.price)
+					    });
+					    console.log(this.totalsettmentnum)
+						
+					}else {
+						this.pickedlist = []
+						this.totalsettmentnum =0
+						this.totalsettmentamount =0
+
+					    console.log(this.totalsettmentnum)
+					}
+					//父组件刷新数据，获得最新数据库数据，渲染页面,通俗更新到vuex中
+					this.$emit('refresdbdata')
+					this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
+					this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
+				}
 
 			}, (e) => {
 				console.log(e)
 			})
 		
-			// if(picked){
-			// 	this.parcartlist.forEach((item)=> {
-			// 		if(!this.pickedlist.includes(item.proname)){
-			// 			this.pickedlist.push(item.proname)
-			// 		}
-			// 	});
+
 			// 	//由于全选，总件数及为各个number的总和
 			// 	this.totalsettmentnum = 0;
 			// 	this.number.forEach((item)=> {
@@ -179,17 +198,34 @@ export default {
 		},
 		//单选，全选操作，选中的item，进入picklist数组中，落选的从中清除。如果所有都选中，则，全选checklist picked变温true
 		selectitem(itemname,index){
+			// console.log(this.pickedlist.indexOf(itemname)==-1)
 
-			console.log(this.pickedlist.indexOf(itemname)==-1)
+			this.$http.post('cartinfodbadd',{"proname":itemname,"isPicked":this.pickedlist.indexOf(itemname)==-1,"source":"selectitem"})
+			.then(res=> {
+				// console.log(res.body.statuscode==1)
+				if(res.body.statuscode==1){
+					
+				    if(this.pickedlist.indexOf(itemname)==-1) {
+				    	this.totalsettmentnum =this.totalsettmentnum - parseInt(this.parcartlist[index].number)
+				    	this.totalsettmentamount =this.totalsettmentamount - parseInt(this.parcartlist[index].number)*parseInt(this.parcartlist[index].price)
 
-			this.$http.post('cartinfodbadd',{"proname":itemname,"isPicked":this.pickedlist.indexOf(itemname)==-1,"source":"selectitem"}).then(res=> {
-				mui.toast(
-					`${res.body.msg}`,
-					{ duration:900, type:'div' }
-			    )
+				    	
+				    }else{
+				    	this.totalsettmentnum =this.totalsettmentnum + parseInt(this.parcartlist[index].number)
+				    	this.totalsettmentamount =this.totalsettmentamount + parseInt(this.parcartlist[index].number)*parseInt(this.parcartlist[index].price)
+				    }
+			
+					this.$emit('refresdbdata')
+					this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
+					this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
+					mui.toast(
+						`${res.body.msg}`,
+						{ duration:900, type:'div' }
+				    )
+				}
 
-			}, (e) => {
-				console.log(e)
+				}, (e) => {
+					console.log(e)
 			})
 			// // 将html中传入的数据，验证，如果没有在pickedlist数组中，就加入
 			// // 由于是v-for内的操作，该方法下获得的数据全部在updated中留存本地
@@ -210,89 +246,111 @@ export default {
 		},
 		//获取每个numbox的值，发送到指定位置
 		getnumber(itemname,index){
-			//获取numbox中的value值，去重 按顺序存放到number数组中去，并且本地localStorage留存
-			this.totalsettmentnum = 0
-			this.totalsettmentamount = 0
-			for(let i=0;i<this.$refs.setnumber.length;i++) {
-				if(this.$refs.setnumber[i].value!=this.number[i]){
-					this.number[i]=this.$refs.setnumber[i].value
-				}
+			if(this.$refs.setnumber) {
+				let number = this.$refs.setnumber[index].value
+				// console.log(`${itemname}一共${number}`)	
+				this.$http.post('cartinfodbadd',{"proname":itemname,"number":number,"source":"getnumber"})
+				.then(res=> {
+					if(res.body.statuscode===1){
+						this.totalsettmentnum = 0
+						this.totalsettmentamount = 0
+						this.parcartlist.forEach((item,index)=>{
+							if(this.pickedlist.includes(item.proname)){
+								this.totalsettmentnum += parseInt(this.parcartlist[index].number)
+								this.totalsettmentamount += parseInt(this.parcartlist[index].number)*parseInt(this.parcartlist[index].price)
+							}
+						})
+
+						this.$emit('refresdbdata')
+						this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
+						this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
+						mui.toast(
+							`${res.body.msg}`,
+							{ duration:900, type:'div' }
+					    )
+					}
+
+				}, (e) => {
+					console.log(e)
+				})			
 			}
-			//获取picklist中所有item的数量，及总金额
-			this.parcartlist.forEach((item,index)=>{
-				if(this.pickedlist.includes(item.proname)){
-					this.totalsettmentnum += parseInt(this.number[index])
-					this.totalsettmentamount += parseInt(this.number[index])*parseInt(item.price)
-				}
-			})
+
+
+
+
+			//获取numbox中的value值，去重 按顺序存放到number数组中去，并且本地localStorage留存
+			// this.totalsettmentnum = 0
+			// this.totalsettmentamount = 0
+			// for(let i=0;i<this.$refs.setnumber.length;i++) {
+			// 	if(this.$refs.setnumber[i].value!=this.number[i]){
+			// 		this.number[i]=this.$refs.setnumber[i].value
+			// 	}
+			// }
+			// //获取picklist中所有item的数量，及总金额
+			// this.parcartlist.forEach((item,index)=>{
+			// 	if(this.pickedlist.includes(item.proname)){
+			// 		this.totalsettmentnum += parseInt(this.number[index])
+			// 		this.totalsettmentamount += parseInt(this.number[index])*parseInt(item.price)
+			// 	}
+			// })
 			
 
-			localStorage.setItem('number',window.JSON.stringify(this.number))
-			localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
-			localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
+			// localStorage.setItem('number',window.JSON.stringify(this.number))
+			// localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
+			// localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
 
-			this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
-			this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
+			// this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
+			// this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
 		},
 		// 获取被选中的件数
 		// 1.pickedlist中的存储值就是parcarlist中的item.proname，
 		// 改变数据的地方包括 numbox的+-button,总选和每个单选input checklist
 		// 由于mui numbox的bug 及在最大或最小值前一，button失效，但是input。value任有效，两个函数放弃使用，直接使用input change事件来监听数据，
-		gettotalsettmentnumplus(itemname,index,totalsettmentnum){
-			this.totalsettmentnum = totalsettmentnum
-			if(this.pickedlist.indexOf(itemname)!=-1){
-				this.totalsettmentnum = totalsettmentnum+ parseInt(1);
-			}
-			localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
-			// console.log(this.totalsettmentnum)
+		gettotalsettmentnumplus(itemname,i){
+		
 		},
-		gettotalsettmentnumminus(itemname,index,totalsettmentnum){
-			this.totalsettmentnum = totalsettmentnum
-			if(this.pickedlist.indexOf(itemname)!=-1){
-				this.totalsettmentnum = totalsettmentnum - parseInt(1);
-			}
-			localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
-			// console.log(this.totalsettmentnum)
+		gettotalsettmentnumminus(itemname,i){
+	
 		},
 		//删除item，首先考虑删除的顺序：数量，金额，依赖的number，parcartlist，以及是否被选中，
 		deletecartitem(i,itemname){
 
 		     // 1.所以先行减去总数量，总金额,但是如果没有被选中，不需要减去数量及总金额。
-		    if(this.pickedlist.includes(itemname)) {
-				this.totalsettmentamount = this.totalsettmentamount - parseInt(this.parcartlist[i].price)*parseInt(this.number[i])
-				this.totalsettmentnum = this.totalsettmentnum - parseInt(this.number[i])
-		    }
+		 //    if(this.pickedlist.includes(itemname)) {
+			// 	this.totalsettmentamount = this.totalsettmentamount - parseInt(this.parcartlist[i].price)*parseInt(this.number[i])
+			// 	this.totalsettmentnum = this.totalsettmentnum - parseInt(this.number[i])
+		 //    }
 
-		    // 2.删除对应列表item 
-			this.parcartlist.splice(i,1)
-            //对应于parcartlist的变动，相应由父组件对应过来的cartlist数组（item.produmodel）,也需要更改，为方便使用this。cartlistfromoperationbar
-            //来变动localstore
-			this.parcartlist.forEach((item)=>{
-				this.cartlistfromoperationbar.push(item.proname)
-			})
+		 //    // 2.删除对应列表item 
+			// this.parcartlist.splice(i,1)
+   //          //对应于parcartlist的变动，相应由父组件对应过来的cartlist数组（item.produmodel）,也需要更改，为方便使用this。cartlistfromoperationbar
+   //          //来变动localstore
+			// this.parcartlist.forEach((item)=>{
+			// 	this.cartlistfromoperationbar.push(item.proname)
+			// })
 
-			// 3.如果picklist中包含该item，删除
-			this.pickedlist.forEach((item)=>{
-				if(this.pickedlist.indexOf(itemname)!=-1){
-					this.pickedlist.splice(this.pickedlist.indexOf(itemname),1)
-				}
-			})
-			// 4.删除number数组中对应item数量
-			this.number.splice(i,1)
+			// // 3.如果picklist中包含该item，删除
+			// this.pickedlist.forEach((item)=>{
+			// 	if(this.pickedlist.indexOf(itemname)!=-1){
+			// 		this.pickedlist.splice(this.pickedlist.indexOf(itemname),1)
+			// 	}
+			// })
+			// // 4.删除number数组中对应item数量
+			// this.number.splice(i,1)
 
 
-			localStorage.setItem('number',window.JSON.stringify(this.number))
-			localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
-			localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
-			localStorage.setItem('cartlist',window.JSON.stringify(this.cartlistfromoperationbar))
+			// localStorage.setItem('number',window.JSON.stringify(this.number))
+			// localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
+			// localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
+			// localStorage.setItem('cartlist',window.JSON.stringify(this.cartlistfromoperationbar))
 
-			localStorage.setItem('cartlistlength',window.JSON.stringify(this.cartlistfromoperationbar.length))
-			localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
+			// localStorage.setItem('cartlistlength',window.JSON.stringify(this.cartlistfromoperationbar.length))
+			// localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
 
-			this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
-			this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
-			this.$store.commit('updatecartlistlength',this.cartlistfromoperationbar.length)
-			this.$store.commit('updatecartlist',this.cartlist)
+			// this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
+			// this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
+			// this.$store.commit('updatecartlistlength',this.cartlistfromoperationbar.length)
+			// this.$store.commit('updatecartlist',this.cartlist)
 
 			//history.go(0)
 			// self.reload()
@@ -305,51 +363,67 @@ export default {
 	        return this.$store.state.storescrollTop
 	    },
 	    // 注意picked放在computed中，放在data，在selectitem方法中使用时候，会出现全选后，取消第一个，全选任然存在，第二个开始取消的现象
-	   //  picked:{
-	   //  	get() {
-		  //   	if(this.pickedlist.length===this.parcartlist.length){
-				// 	return true
-				// }else{
-				// 	return false
-				// }
+	    picked:{
+	    	get() {
+		    	if(this.pickedlist.length===this.parcartlist.length){
+					return true
+				}else{
+					return false
+				}
+	    	},
+	    	set() {
+	    		
+	    	}
+	    },
+	   //  pickedlist: {
+	   //  	get(){
+	   //  		let prepicklist = []
+		  //   	this.parcartlist.forEach((item)=> {
+				// 	if(item.picekd) {
+				// 		prepicklist.push(item.proname)
+				//     }
+				// })
+		  //   	return prepicklist
 	   //  	},
 	   //  	set() {
 	    		
 	   //  	}
-	   //  }
+
+	    // }
 	},
-	props:['parcartlist','parunitedselllist','parstatucode'],
+	props:['parcartlist','parunitedselllist','parprepickedlist'],
 	created() {
-		this.picked = JSON.parse(localStorage.getItem('picked'))||true
-		this.pickedlist = JSON.parse(localStorage.getItem('pickedlist'))||[]
-		this.totalsettmentnum = JSON.parse(localStorage.getItem('totalsettmentnum'))||0
-		this.totalsettmentamount = JSON.parse(localStorage.getItem('totalsettmentamount'))||0
+		this.pickedlist = this.parprepickedlist
+		// this.picked = JSON.parse(localStorage.getItem('picked'))||true
+		// this.pickedlist = JSON.parse(localStorage.getItem('pickedlist'))||[]
+		// this.totalsettmentnum = JSON.parse(localStorage.getItem('totalsettmentnum'))||0
+		// this.totalsettmentamount = JSON.parse(localStorage.getItem('totalsettmentamount'))||0
 	},
 	updated() {
 		// 注意在v-for的情况下，初始化，以及dom的选择放在updated钩子函数中，
 		mui('.mui-numbox').numbox();
 
         // 注意在selectitem方法中发生的pickledist的变化，需要在updated中存储到localStroage
-		localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
+		// localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
 		// localStorage.setItem('pickedlistindex',window.JSON.stringify(this.pickedlistindex))
-		localStorage.setItem('picked',window.JSON.stringify(this.picked))
+		// localStorage.setItem('picked',window.JSON.stringify(this.picked))
 
 		//同理 在v-for情况下对于input.value赋值，无法通过:value="number["+index+"]"来实现，所以通过ref操作来实现
 		//读取存储1.读取本地内存设置number数组
-		this.number = JSON.parse(localStorage.getItem('number'))||[]
+		// this.number = JSON.parse(localStorage.getItem('number'))||[]
 		
 		//第二步 将number数组中的值分配到相对应的input value中,注意过分布添加的过程中，会出现，列表数大于number数
 		//的情况，此时直接给number添加缺少数量的1
-		if(this.$refs.setnumber) {
-			for(let i=0;i<this.$refs.setnumber.length;i++) {
-				if(this.$refs.setnumber.length>this.number.length){
-					for(let k=0;k<(this.$refs.setnumber.length-this.number.length);k++) {
-						this.number.push(parseInt(1))
-					}
-				}
-				this.$refs.setnumber[i].value=this.number[i]
-			}
-		}
+		// if(this.$refs.setnumber) {
+		// 	for(let i=0;i<this.$refs.setnumber.length;i++) {
+		// 		if(this.$refs.setnumber.length>this.number.length){
+		// 			for(let k=0;k<(this.$refs.setnumber.length-this.number.length);k++) {
+		// 				this.number.push(parseInt(1))
+		// 			}
+		// 		}
+		// 		this.$refs.setnumber[i].value=this.number[i]
+		// 	}
+		// }
 		//本地储存number
 		localStorage.setItem('number',window.JSON.stringify(this.number))
 		localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))

@@ -36,7 +36,10 @@ const CartListSchema = {
     },
     "number": {
         type:Number,
-        default:0
+        require:true,
+        default:1,
+        max:10,
+        min:1
     },
     "proseller":{
         type:String,
