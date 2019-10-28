@@ -6,7 +6,6 @@
 		<cart 
 			:parcartlist ="cartlist" 
 			:parunitedselllist="unitedselllist" 
-			:parprepickedlist="prepickedlist"
 			@refresdbdata = "getlatestdbdat"
 		>
 		</cart>
@@ -51,22 +50,12 @@ export default {
 				
 				if(res.body) {
 					this.cartlist=[...res.body]
-					this.cartlist.forEach(item=> {
-						if(item.picked){
-							this.prepickedlist.push(item.proname)
-						}
-					})
-				}
-				// Toast({
-				// 	message: `${res.body.msg}`,
-				// 	position: 'middle',
-				// 	duration: 1000
-				// });
-				if(res.body.statuscode==0){
-					mui.toast(
-						`${res.body.msg}`,
-						{ duration:900, type:'div' }
-					)
+					if(res.body.statuscode==0||res.body.statuscode==10){
+						mui.toast(
+							`${res.body.msg}`,
+							{ duration:900, type:'div' }
+						)
+					}
 				}
 				
 			}, (e) => {

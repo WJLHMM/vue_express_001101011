@@ -99,6 +99,15 @@ const CartListFind = (keyObj={}) => {
     });
 }
 
+const CartListRemove = (keyObj={}) => {
+    return new Promise((resolve, reject) => {
+        CartListModel.remove(keyObj,(err,doc)=> {
+            if(err) return reject(err)
+            resolve(doc)
+        })
+    });
+}
+
 const CartListaggfind = (keyObj={}) => {
     return new Promise((resolve,reject)=> {
         CartListModel.aggregate([
@@ -149,6 +158,7 @@ const CartListUpdateOne = (currentdata,updateddata)=> {
 module.exports = {
     CartListAdd,
     CartListFind,
+    CartListRemove,
     CartListaggfind,
     CartListUpdateMany,
     CartListUpdateOne

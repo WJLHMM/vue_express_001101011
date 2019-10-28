@@ -17,11 +17,8 @@
 			class="mui-tab-item" 
 		>
 			<i class="iconfont cart-iconfont">&#xe618;
-				<span 
-					class="mui-badge cart-badge"
-					v-text="footer_isLogin?cartlistlengthfromvuex:0"
-				>
-				</span>
+				<span class="mui-badge cart-badge" v-if="footer_isLogin">{{cartlistlengthfromvuex}}</span>
+				<span class="mui-badge cart-badge"  v-if="!footer_isLogin" >0</span>
 			</i>
 			<span class="mui-tab-label cart-text">购物车</span>
 		</router-link>

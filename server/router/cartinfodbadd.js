@@ -7,6 +7,7 @@ const  { RedisGetdata,RedisGetKeys } = require('../db/redis/redisoperation.js')
 const {  
     CartListAdd,
     CartListFind,
+    CartListRemove,
     CartListUpdateMany,
     CartListUpdateOne
 } = require('../db/mongodb/cartlistSchema.js')
@@ -140,6 +141,18 @@ router.post('/api/cartinfodbadd',async (req, res, next)=> {
                 loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
                 res.send({'statuscode':0,'msg':`没有查询到该产品`})
                 return
+        })
+    }else if(req.body.source==="deletecartitem"){
+        let { proname } = req.body
+        let KeyObj = { proname,username}
+        // console.log(KeyObj)
+        CartListRemove(KeyObj)
+        .then(data=> {
+            return res.send({'statuscode':1,'msg':`您已经成功将${proname}从购物车中删除`})
+        })
+        .catch(err=> {
+            loggerWin.error(`${err}--${req.method}--${req.url}--${req.headers['user-agent']}`)
+            return res.send({'statuscode':0,'msg':`${err.stack}`})
         })
     }
 
