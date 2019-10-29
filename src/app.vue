@@ -61,7 +61,6 @@
 	        }
 		},
 		created(){
-			
 		},
 		mounted(){
 			window.addEventListener('scroll', this.handleScroll,{ passive: false })

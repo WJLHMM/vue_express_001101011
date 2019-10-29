@@ -143,7 +143,14 @@ export default {
 			isLogininmyinfo:true,
 			userloginedinmyinfo:{},
 			myinfo:{},
-			isEditPageshow:false
+			isEditPageshow:false,
+			cartlistlength:0,
+			cartlist:[],
+			cartlistkey:[],
+			pickedlist:[],
+			picked:null,
+			totalsettmentnum:0,
+			totalsettmentamount:0,
 		}
 	},
 	methods: {
@@ -172,7 +179,7 @@ export default {
 						localStorage.removeItem('number')
 						localStorage.removeItem('cartlistlengthfromvuex')
 						localStorage.removeItem('cartlistlength')
-						localStorage.removeItem('cartlist')
+						localStorage.removeItem('cartlistkey')
 						mui.toast(
 							`${res.body.msg}`,
 							{ duration:900, type:'div' }
@@ -194,7 +201,51 @@ export default {
 					return item.username == this.userloginedinmyinfo.username
 				})
 				this.myinfo = m[0]
-				// console.log(this.myinfo)
+				this.getshopcartlist()
+			})
+		},
+		getshopcartlist() {
+			this.$http.post('cartinfo',{"username":this.userloginedinmyinfo.username}).then(res=> {
+				if(res.body) {
+					if(res.body){
+						this.cartlist = [ ...res.body ]
+						this.cartlistkey = this.cartlist.map(item=>item.proname)
+						this.cartlistlength = this.cartlistkey.length
+						localStorage.setItem("cartlistlength",window.JSON.stringify(this.cartlistlength))//这里不加window.老报错
+						this.$store.commit('updatecartlistlength',this.cartlistlength)
+						localStorage.setItem("cartlistkey",window.JSON.stringify(this.cartlistkey))//这里不加window.老报错
+						this.$store.commit('updatecartlistkey',this.cartlistkey)
+						this.cartlist.forEach(item=> {
+							if(item.picked){
+								this.pickedlist.push(item.proname)
+								this.totalsettmentnum += item.number
+								this.totalsettmentamount +=item.number*item.price
+							}
+						})
+						if(this.cartlistlength!=0){
+							if(this.pickedlist.length==this.cartlist.length){
+								this.picked = true
+							}else {
+								this.picked = false
+							}
+						}else{
+							this.picked = false
+						}
+						localStorage.setItem('picked',window.JSON.stringify(this.picked))
+						this.$store.commit('updatepicked',this.picked)
+						localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
+						localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
+						localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
+						this.$store.commit('updatepickedlist',this.pickedlist)
+						this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
+						this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
+						
+					}
+					
+				}
+				
+			}, (e) => {
+				console.log(e)
 			})
 		},
 		editpagtoggle() {
@@ -226,6 +277,7 @@ export default {
 		this.isLoginininmyinfo =JSON.parse(localStorage.getItem('isLogin'))
 		this.userloginedinmyinfo = JSON.parse(localStorage.getItem('userlogined'))
 		this.getmyinfo()
+
 	},
 	updated() {
 		// this.getmyinfo()

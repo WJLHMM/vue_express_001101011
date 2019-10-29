@@ -139,7 +139,7 @@ export default {
 			// 反之 取消checkbox 将pickedlist清空
 			
 			picked=!picked
-			// console.log('selectallitem',picked)
+			console.log('selectallitem',picked)
 			this.$http.post('cartinfodbadd',{'picked':picked,"source":"selectallitem"}).then(res=> {
 				if(res.body.statuscode===1){
 					this.$emit('refresdbdata')
@@ -155,18 +155,18 @@ export default {
 							this.totalsettmentnum += parseInt(item.number)
 							this.totalsettmentamount += parseInt(item.number)*parseInt(item.price)
 					    });
-					    console.log('selectallitem+',this.totalsettmentnum)
-					    console.log('selectallitem+',this.totalsettmentamount)
 						
 					}else {
 						this.pickedlist = []
 						this.totalsettmentnum =0
 						this.totalsettmentamount =0
-
-					    console.log('selectallitem-',this.totalsettmentnum)
 					}
 				}
 				//父组件刷新数据，获得最新数据库数据，渲染页面,更新到vuex中
+				localStorage.setItem('picked',window.JSON.stringify(this.picked))
+				this.$store.commit('updatepicked',this.picked)
+				localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
+				this.$store.commit('updatepickedlist',this.pickedlist)
 				localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
 				localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
 				this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
@@ -209,9 +209,11 @@ export default {
 					}else {
 						this.picked = false
 					}
+					localStorage.setItem('picked',window.JSON.stringify(this.picked))
+					this.$store.commit('updatepicked',this.picked)
+					localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
+					this.$store.commit('updatepickedlist',this.pickedlist)
 
-					console.log('selectitem_pickedlist',this.pickedlist)
-					console.log('selectitem_picked',this.picked)
 					mui.toast(
 						`${res.body.msg}`,
 						{ duration:900, type:'div' }
@@ -250,21 +252,21 @@ export default {
 						// }
 						this.totalsettmentnum = 0
 						this.totalsettmentamount = 0
-						for(let i=0;i<this.$refs.setnumber.length;i++) {
-							if(this.$refs.setnumber[i].value!=this.number[i]){
-								this.number[i]=this.$refs.setnumber[i].value
-							}
-						}
+						// for(let i=0;i<this.$refs.setnumber.length;i++) {
+						// 	if(this.$refs.setnumber[i].value!=this.number[i]){
+						// 		this.number[i]=parseInt(this.$refs.setnumber[i].value)
+						// 	}
+						// }
 						//获取picklist中所有item的数量，及总金额
 						this.parcartlist.forEach((item,index)=>{
 							if(this.pickedlist.includes(item.proname)){
-								this.totalsettmentnum += parseInt(this.number[index])
-								this.totalsettmentamount += parseInt(this.number[index])*parseInt(item.price)
+								this.totalsettmentnum += parseInt(this.$refs.setnumber[index].value)
+								this.totalsettmentamount += parseInt(this.$refs.setnumber[index].value)*parseInt(item.price)
 							}
 						})
 						
 
-						localStorage.setItem('number',window.JSON.stringify(this.number))
+						// localStorage.setItem('number',window.JSON.stringify(this.number))
 						localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
 						localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
 
@@ -307,7 +309,7 @@ export default {
 
 				    // 2.删除对应列表item 
 					this.parcartlist.splice(i,1)
-		            //对应于parcartlist的变动，相应由父组件对应过来的cartlist数组（item.produmodel）,也需要更改，为方便使用this。cartlistfromoperationbar
+		            //对应于parcartlist的变动，相应由父组件对应过来的cartlistkey数组（item.proname）,也需要更改，为方便使用this。cartlistfromoperationbar
 		            //来变动localstore
 					this.parcartlist.forEach((item)=>{
 						this.cartlistfromoperationbar.push(item.proname)
@@ -323,10 +325,10 @@ export default {
 					this.number.splice(i,1)
 
 
-					localStorage.setItem('number',window.JSON.stringify(this.number))
+					// localStorage.setItem('number',window.JSON.stringify(this.number))
 					localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
 					localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
-					localStorage.setItem('cartlist',window.JSON.stringify(this.cartlistfromoperationbar))
+					localStorage.setItem('cartlistkey',window.JSON.stringify(this.cartlistfromoperationbar))
 
 					localStorage.setItem('cartlistlength',window.JSON.stringify(this.cartlistfromoperationbar.length))
 					localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
@@ -334,7 +336,7 @@ export default {
 					this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
 					this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
 					this.$store.commit('updatecartlistlength',this.cartlistfromoperationbar.length)
-					this.$store.commit('updatecartlist',this.cartlist)
+					this.$store.commit('updatecartlistkey',this.cartlistfromoperationbar)
 
 					//history.go(0)
 					// self.reload()
@@ -352,72 +354,47 @@ export default {
 	    searchscrolltop() {
 	        return this.$store.state.storescrollTop
 	    }, 
-	    // totalsettmentnum:{
-	    // 	get() {
-	    //     	return this.$store.state.storetotalsettmentnum
-
-	    // 	},
-	    // 	set(){}
-		
-	    // }, 
-	    // totalsettmentamount:{
-	    // 	get() {
-	    //     	return this.$store.state.storetotalsettmentamount
-	    // 	},
-	    // 	set(){}
-	    // },
-
 	},
 	props:['parcartlist','parunitedselllist'],
 	created() {
-		if(this.parcartlist.length!=0) {
-			this.parcartlist.forEach(item=> {
-				if(item.picked){
-					this.pickedlist.push(item.proname)
-				}
-			})
+		this.pickedlist = this.$store.state.storepickedlist||JSON.parse(localStorage.getItem('picked'))
+		this.picked = this.$store.state.storepicked||JSON.parse(localStorage.getItem('picked'))
+		this.totalsettmentnum = this.$store.state.storetotalsettmentnum||JSON.parse(localStorage.getItem('totalsettmentnum'))
+		this.totalsettmentamount = this.$store.state.storetotalsettmentamount||JSON.parse(localStorage.getItem('totalsettmentamount'))
+		// this.picked = JSON.parse(localStorage.getItem('picked'))||true
+		// this.pickedlist = JSON.parse(localStorage.getItem('pickedlist'))||[]
+		// this.totalsettmentnum = JSON.parse(localStorage.getItem('totalsettmentnum'))||0
+		// this.totalsettmentamount = JSON.parse(localStorage.getItem('totalsettmentamount'))||0
 
-			if(this.pickedlist.length==this.parcartlist.length){
-				this.picked = true
-			}else {
-				this.picked = false
-			}
-
-			this.totalsettmentnum = JSON.parse(localStorage.getItem('totalsettmentnum'))||0
-		    this.totalsettmentamount = JSON.parse(localStorage.getItem('totalsettmentamount'))||0
-		}
-		
 	},
 	updated() {
 		// 注意在v-for的情况下，初始化，以及dom的选择放在updated钩子函数中，
 		mui('.mui-numbox').numbox();
 		
-		   // 注意在selectitem方法中发生的picklist的变化，需要在updated中存储到localStroage
-		localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
-		// localStorage.setItem('pickedlistindex',window.JSON.stringify(this.pickedlistindex))
-		localStorage.setItem('picked',window.JSON.stringify(this.picked))
+		// 注意在selectitem方法中发生的picklist的变化，需要在updated中存储到localStroage
+	
 
 		//同理 在v-for情况下对于input.value赋值，无法通过:value="number["+index+"]"来实现，所以通过ref操作来实现
 		//读取存储1.读取本地内存设置number数组
-		this.number = JSON.parse(localStorage.getItem('number'))||[]
+		// this.number = JSON.parse(localStorage.getItem('number'))||[]
 		
 		//第二步 将number数组中的值分配到相对应的input value中,注意过分布添加的过程中，会出现，列表数大于number数
 		//的情况，此时直接给number添加缺少数量的1
-		if(this.$refs.setnumber){
-			for(let i=0;i<this.$refs.setnumber.length;i++) {
-				if(this.$refs.setnumber.length>this.number.length){
-					for(let k=0;k<(this.$refs.setnumber.length-this.number.length);k++) {
-						this.number.push(parseInt(1))
-					}
-				}
-				this.$refs.setnumber[i].value=this.number[i]
-			}
+		// if(this.$refs.setnumber){
+		// 	for(let i=0;i<this.$refs.setnumber.length;i++) {
+		// 		if(this.$refs.setnumber.length>this.number.length){
+		// 			for(let k=0;k<(this.$refs.setnumber.length-this.number.length);k++) {
+		// 				this.number.push(parseInt(1))
+		// 			}
+		// 		}
+		// 		this.$refs.setnumber[i].value=this.number[i]
+		// 	}
 
-		}
+		// }
 		//本地储存number
-		localStorage.setItem('number',window.JSON.stringify(this.number))
-		localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
-		localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
+		// localStorage.setItem('number',window.JSON.stringify(this.number))
+		// localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
+		// localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
 
 		//注意当购物车被清空后，务必清除相对应localstorage，否则数据混乱
 		if(this.parcartlist.length==0) {
@@ -433,7 +410,12 @@ export default {
 			localStorage.removeItem('cartlist')
 		}
 
+	},
+	mounted() {
+		this.picked = JSON.parse(localStorage.getItem('picked'))
+		this.pickedlist = JSON.parse(localStorage.getItem('pickedlist'))
 	}
+
 }
 </script>
 

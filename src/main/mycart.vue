@@ -41,7 +41,7 @@ export default {
 			cartlistkey:[],
 			cartlist:[],
 			username:'',
-			prepickedlist:[]
+			cartlistlength:0
 		}
 	},
 	methods: {
@@ -49,7 +49,9 @@ export default {
 			this.$http.post('cartinfo',{"username":this.$route.query.username}).then(res=> {
 				
 				if(res.body) {
-					this.cartlist=[...res.body]
+					if(res.body){
+						this.cartlist=[...res.body]
+					}
 					if(res.body.statuscode==0||res.body.statuscode==10){
 						mui.toast(
 							`${res.body.msg}`,

@@ -45,7 +45,7 @@ Vue.component(Toast.name, Toast);
 export default {
 	data() {
 		return {
-			cartlist:[],
+			cartlistkey:[],
 			cartlistlength:0,
 			isBallshow:false
 		}
@@ -55,23 +55,26 @@ export default {
 			// 注意carlist获取本地存储的位置，该数组的作用是记录购物车中的关键词
 			// console.log(parproname)
 			this.$http.post('cartinfodbadd',{'proname':parproname}).then(res=> {
-				// console.log(res.body.msg)
 				if(res.body.statuscode==1) {
-					this.cartlist = JSON.parse(localStorage.getItem('cartlist')||'[]');
-					if(!this.cartlist.includes(parproname)){
-						this.cartlist.unshift(parproname);
+					this.cartlistkey = JSON.parse(localStorage.getItem('cartlistkey')||'[]')
+					this.cartlistlength = JSON.parse(localStorage.getItem('cartlistlength')||0)
+				
+					if(!this.cartlistkey.includes(parproname)){
+						this.cartlistkey.push(parproname);
+						localStorage.setItem("cartlistkey",window.JSON.stringify(this.cartlistkey))//这里不加window.老报错
+						this.$store.commit('updatecartlistkey',this.cartlistkey)
 						this.isBallshow =!this.isBallshow;
 					}
 					// 注意给operationbar中的徽章数字延迟变化，延迟时间等同于小球抛物线到购物篮的时间。注意由于setTimeout是异步的，相对应的
 					// localstorage $store.commit 均要放在setTimeout中，否则会出现localstorage，vuex数据不能同步更新
 					
 					setTimeout(()=>{
-						this.cartlistlength = this.cartlist.length
+						this.cartlistlength = this.cartlistkey.length
 						localStorage.setItem("cartlistlength",window.JSON.stringify(this.cartlistlength))//这里不加window.老报错
 						this.$store.commit('updatecartlistlength',this.cartlistlength)
+						this.$store.commit('updatepicked',false)
 					},400)
-					localStorage.setItem("cartlist",window.JSON.stringify(this.cartlist))//这里不加window.老报错
-					this.$store.commit('updatecartlist',this.cartlist)
+					
 				}
 				Toast({
 					message: `${res.body.msg}`,
@@ -117,7 +120,8 @@ export default {
 	},
 
 	created(){
-		this.cartlistlength = JSON.parse(localStorage.getItem('cartlistlength'))||'0';
+		this.cartlistkey = JSON.parse(localStorage.getItem('cartlistkey')||'[]')
+		this.cartlistlength = JSON.parse(localStorage.getItem('cartlistlength')||0)
 	},
 	props:['parproname'],
 	computed: {
@@ -139,6 +143,7 @@ export default {
     },
 	watch: {
 		'cartlistlength':function(newValue,oldValue) {
+			// console.log(newValue,oldValue)
 			// setTimeout(()=>{
 			// 	this.cartlistlength = newValue
 			// },400)

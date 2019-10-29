@@ -10,7 +10,7 @@
 			</div>
 			<div class="settlement">
 				<div class="listamount">
-					<div class="laupper">
+					<!-- <div class="laupper">
 						<span class="lauppertext">
 							总计：
 						</span>
@@ -18,7 +18,7 @@
 							￥
 						</span>
 						<span class="amount">{{totalsettmentamountfromvuex}}</span>
-					</div>
+					</div> -->
 					<div class="labelow">
 						<div class="totalamount">
 							<span class="tlbelowtext">
