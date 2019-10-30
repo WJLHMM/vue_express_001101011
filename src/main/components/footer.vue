@@ -40,26 +40,8 @@ export default {
 		}
 	},
 	methods: {
-		checkisLogined(footer_isLogin) {
-			if(footer_isLogin){
-				this.$router.push({
-					path:'/mycart',
-					query: this.userloginedfromvuex
-				}) 
-					
-			}else{
-				mui.toast(
-					`${请您先登录}`,
-					{ duration:900, type:'div' }
-				)
-				setTimeout(()=> {	
-					this.$router.push({
-						path:'/login'
-					}) 
-				},1000)
-			}
-
-		}
+	
+		
 	},
 	created(){
 		// let username = JSON.parse(localStorage.getItem('userlogined'))||''

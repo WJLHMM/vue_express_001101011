@@ -40,7 +40,10 @@
 						</div>
 					</div>
 				</div>
-				<button class="settleclick">
+				<button 
+					class="settleclick"
+					@click = "topurchasingorder"
+				>
 					<span class="text1">去结算</span>
 					<span>({{totalsettmentnumfromvuex}}件)</span>
 				</button>
@@ -61,7 +64,12 @@ export default {
 		}
 	},
 	methods: {
-	   
+	   	topurchasingorder() {
+	   		console.log(this.userlogined)
+			this.$router.push({
+				path:'/purchasingorder?username=' + this.userlogined.username,
+			}) 
+		}
 
 	},
 
@@ -80,10 +88,16 @@ export default {
         	get() {
         		return this.$store.state.storetotalsettmentamount||JSON.parse(localStorage.getItem('totalsettmentamountfromvuex'))||0
         	}
-        }
+        },  
+        userlogined:{
+        	get() {
+        		return this.$store.state.storeuserlogined||JSON.parse(localStorage.getItem('userlogined'))
+        	},
+        	set(){}
+        },
     },
 	props:['parlastestcartlist'],
-	updated() {
+	created() {
 	}
 }
 </script>

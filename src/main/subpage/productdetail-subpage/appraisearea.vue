@@ -28,7 +28,7 @@
 				></span>
 				
 			</p>
-			<p class="appraisedate">{{item.commendate}}</p>
+			<p class="appraisedate">{{item.commendate|dataformat}}</p>
 		</div>
 		<div class="appraisecontent">
 			{{item.commentcontent}}
@@ -45,6 +45,10 @@ import Vue from 'vue'
 Vue.filter('usernameomit',function(filtermsg){
 	//这里注意各种字符串API，有些事直接修改str,例如charAt()，而有些是返回一个截取的字符串，或数组，本案中采取后一种的api
 	return filtermsg.substr(0,1)+'***'+filtermsg.substr(-1,1)
+});	
+Vue.filter('dataformat',function(itemcommendate){
+	//这里注意各种字符串API，有些事直接修改str,例如charAt()，而有些是返回一个截取的字符串，或数组，本案中采取后一种的api
+	return itemcommendate.substr(0,10)
 });	
 export default {
 	data() {

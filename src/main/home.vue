@@ -105,6 +105,9 @@ export default {
 			newyearboardend,
 			newyearbordpro2
 		},
+	watch: {
+
+	},
 	created(){
 		this.getmjdindexlist()
 		

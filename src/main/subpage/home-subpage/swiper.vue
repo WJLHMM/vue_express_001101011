@@ -2,8 +2,17 @@
 <template>
 
 	<mt-swipe :auto="4000" vertical="true">
-		<mt-swipe-item v-for="item in parindswpier" :key="item._id">
-			<img :src="item.avaterurl" alt="homepic" class="swiperimg">
+		<mt-swipe-item 
+			v-for="item in parindswpier" 
+			:key="item._id"
+			
+		>
+			<img 
+				:src="item.avaterurl" 
+				alt="homepic" 
+				class="swiperimg"
+				@click = "detailpages(item.title,item._id)"
+			>
 		</mt-swipe-item>
 		
 	</mt-swipe>
@@ -23,6 +32,12 @@ export default {
 		}
 	},
 	methods: {
+		detailpages(title,id) {
+			console.log(title,id)
+			this.$router.push({
+				path:'/detailpage?section=' + title + '&id=' + id
+			}) 
+		}
 	},
 	props:['parindswpier'],
 	created(){

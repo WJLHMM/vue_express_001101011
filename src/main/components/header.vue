@@ -70,6 +70,14 @@ export default {
 			this.textcolor= '#000'
 			this.isProductdetail=true
 			// this.path = '/productlist?item=' + this.item
+		}else if(this.$route.fullPath.indexOf('purchasingorder')!=-1){
+			this.title ='确认订单', 
+			this.color = '#fff',
+			this.textcolor= '#000'
+		}else if(this.$route.fullPath.indexOf('detailpage')!=-1){
+			this.title ='广告', 
+			this.color = '#fff',
+			this.textcolor= '#000'
 		}
 	},
 	props:['paritem'],

@@ -393,8 +393,8 @@ export default {
 		// }
 		//本地储存number
 		// localStorage.setItem('number',window.JSON.stringify(this.number))
-		// localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
-		// localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
+		localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
+		localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
 
 		//注意当购物车被清空后，务必清除相对应localstorage，否则数据混乱
 		if(this.parcartlist.length==0) {

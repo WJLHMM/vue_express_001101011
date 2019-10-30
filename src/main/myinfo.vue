@@ -234,10 +234,10 @@ export default {
 						localStorage.setItem('picked',window.JSON.stringify(this.picked))
 						this.$store.commit('updatepicked',this.picked)
 						localStorage.setItem('pickedlist',window.JSON.stringify(this.pickedlist))
-						localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
-						localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
 						this.$store.commit('updatepickedlist',this.pickedlist)
+						localStorage.setItem('totalsettmentnum',window.JSON.stringify(this.totalsettmentnum))
 						this.$store.commit('updatetotalsettmentnum',this.totalsettmentnum)
+						localStorage.setItem('totalsettmentamount',window.JSON.stringify(this.totalsettmentamount))
 						this.$store.commit('updatetotalsettmentamount',this.totalsettmentamount)
 						
 					}

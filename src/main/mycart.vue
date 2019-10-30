@@ -3,6 +3,7 @@
 	<div class="mycart">
 		<appheader></appheader>
 		<actionsheet></actionsheet>
+		<div class="emptyshow" v-if="isEmptyshow" >{{emptyshow}}</div>
 		<cart 
 			:parcartlist ="cartlist" 
 			:parunitedselllist="unitedselllist" 
@@ -41,7 +42,10 @@ export default {
 			cartlistkey:[],
 			cartlist:[],
 			username:'',
-			cartlistlength:0
+			cartlistlength:0,
+			emptyshow:'',
+			isEmptyshow:false
+
 		}
 	},
 	methods: {
@@ -51,12 +55,17 @@ export default {
 				if(res.body) {
 					if(res.body){
 						this.cartlist=[...res.body]
+						this.isEmptyshow = false
 					}
-					if(res.body.statuscode==0||res.body.statuscode==10){
+					if(res.body.statuscode==0){
 						mui.toast(
 							`${res.body.msg}`,
 							{ duration:900, type:'div' }
 						)
+					}
+					if(res.body.statuscode==10){
+						this.emptyshow = `${res.body.msg}`
+						this.isEmptyshow=true
 					}
 				}
 				
@@ -92,6 +101,15 @@ export default {
 </script>
 
 <style scoped lang='less'>
-	
+	.emptyshow {
+		top: 200px;
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		text-align:center; 
+		color: red;
+		font-size: 20px; 
+		line-height: 20px;
+	}
 	
 </style>
