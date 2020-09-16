@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 
 import App from './app.vue'
 import home from './main/home.vue'
-import commoditynav from './main/commoditynav.vue'
+import commoditynav from './main/Commoditynav.vue'
 import mycart from './main/mycart.vue'
 import myinfo from './main/myinfo.vue'
 import login from './main/login.vue'

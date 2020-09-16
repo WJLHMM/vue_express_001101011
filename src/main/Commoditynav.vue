@@ -15,7 +15,7 @@
 
 <script>
 import search from './components/search.vue';
-import totalmenu from './subpage/Commoditynav-subpage/menu.vue';
+import totalmenu from './subpage/Commoditynav-subpage/Menu.vue';
 // import catalogynav from './subpage/Commoditynav-subpage/catalogynav.vue';
 
 

@@ -9,8 +9,6 @@ let REDIS_CONF
     //mongodb
     MONGODB_CONF = {
         host:'localhost',
-        // user:'wanglewis',
-        // password:'mARMAR12!',
         port:'27017',
         database:'vueExpress001',//database的名称
     }
@@ -25,8 +23,6 @@ let REDIS_CONF
 // if(env==='production') {
 //     MONGODB_CONF = {
 //         host:'localhost',
-//         // user:'wanglewis',
-//         // password:'mARMAR12!',
 //         port:'27017',
 //         database:'vueExpress001',//database的名称
 //     }
