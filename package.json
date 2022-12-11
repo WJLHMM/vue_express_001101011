@@ -23,7 +23,7 @@
     "cookie-parser": "^1.4.4",
     "cross-env": "^6.0.3",
     "ejs": "^2.6.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.16.2",
     "express-winston": "^3.3.0",
     "file-stream-rotator": "^0.5.5",
